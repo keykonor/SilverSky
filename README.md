@@ -1,6 +1,6 @@
 # SilverSky V3
 
-> GitHub 首发为当前 V3 源码快照，包含前后端与测试。公开展示页不运行后端。本机证据与历史归档单独保留；厂商图片请查看目录中的官方来源。
+> GitHub 首发为当前 V3 源码快照，包含前后端与测试。[打开 GitHub Pages 静态展示](https://keykonor.github.io/SilverSky/) · [下载静态网页 ZIP](https://github.com/keykonor/SilverSky/archive/refs/heads/gh-pages.zip)。公开展示页不运行后端。本机证据与历史归档单独保留；厂商图片请查看目录中的官方来源。
 
 面向老年人及其子女的综合出行规划 MVP，首期天津、深圳。优先级：**安全 > 舒适 > 可达性 > 时间 > 成本**。地面数据按来源展示；低空数据明确为模拟，不表示真实航空服务可用或可预订。
 
