@@ -1,0 +1,98 @@
+{
+  "evidenceType": "AUTOMATED_EVIDENCE",
+  "zoom": "Chrome native 200%",
+  "panels": [
+    {
+      "selector": ".needs-card",
+      "clientWidth": 681,
+      "scrollWidth": 681
+    },
+    {
+      "selector": ".routes-section",
+      "clientWidth": 681,
+      "scrollWidth": 681
+    },
+    {
+      "selector": ".route-card.selected",
+      "clientWidth": 649,
+      "scrollWidth": 649
+    },
+    {
+      "selector": ".route-detail",
+      "clientWidth": 649,
+      "scrollWidth": 649
+    },
+    {
+      "selector": ".journey-timeline",
+      "clientWidth": 621,
+      "scrollWidth": 621
+    },
+    {
+      "selector": ".composer",
+      "clientWidth": 681,
+      "scrollWidth": 681
+    },
+    {
+      "selector": ".route-map-shell__controls",
+      "clientWidth": 720,
+      "scrollWidth": 720
+    },
+    {
+      "selector": ".route-map__header",
+      "clientWidth": 308,
+      "scrollWidth": 308
+    },
+    {
+      "selector": ".route-map__details",
+      "clientWidth": 238,
+      "scrollWidth": 238
+    }
+  ],
+  "focus": [
+    {
+      "name": "重新规划",
+      "focused": true,
+      "top": 86.5,
+      "bottom": 133.5,
+      "left": 609,
+      "right": 707,
+      "viewportWidth": 720,
+      "viewportHeight": 450
+    },
+    {
+      "name": "真实城市地图",
+      "focused": true,
+      "top": 206.6171875,
+      "bottom": 243.6171875,
+      "left": 84,
+      "right": 202,
+      "viewportWidth": 720,
+      "viewportHeight": 450
+    },
+    {
+      "name": "立体旅程示意",
+      "focused": true,
+      "top": 205.6171875,
+      "bottom": 244.6171875,
+      "left": 210,
+      "right": 330,
+      "viewportWidth": 720,
+      "viewportHeight": 450
+    },
+    {
+      "name": "查看完整路线",
+      "focused": true,
+      "top": 411.1953125,
+      "bottom": 450.1953125,
+      "left": 35,
+      "right": 157,
+      "viewportWidth": 720,
+      "viewportHeight": 450
+    }
+  ],
+  "issue": null,
+  "mapOverlay": {
+    "overlapX": 240,
+    "overlapY": 0
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "evidenceType": "AUTOMATED_EVIDENCE",
+  "environment": "Chrome WebGL disabled by launch flags",
+  "city": "天津",
+  "routeCount": 2,
+  "safety": "安全审查：当前不建议采用\n数据来源：暂无可靠数据",
+  "mapText": "地图视角\n真实城市地图\n立体旅程示意\n正在查看：模拟低空情景。安全审查：当前不建议采用\n地面 + 未来低空场景\n模拟低空情景\n\n仅供情景演示，不代表真实航线或可乘坐服务。\n\n当前查看的方案\n\n查看完整路线\n\n地图暂时无法显示；请阅读行程阶段与安全说明。\n\n地图暂时无法显示。路线文字说明仍可查看。\n\n模拟起降点 A详情\n模拟起降点 B详情\n出发地\n目的地\n模拟起降点\n地面示意\n模拟低空\n数据说明\n\n地点、道路或建筑数据 © OpenStreetMap contributors；Cesium 数据署名见地图底部。",
+  "issue": null
+}

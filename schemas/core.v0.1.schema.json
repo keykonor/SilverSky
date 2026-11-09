@@ -1,0 +1,332 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "SilverSky core contract v0.1 proposal",
+  "description": "Proposal for core planning data. The root schema validates PlanningResult; UserRequest and the other types are available in $defs.",
+  "$ref": "#/$defs/PlanningResult",
+  "$defs": {
+    "DataStatus": {
+      "type": "string",
+      "enum": ["VERIFIED", "PUBLIC_DATA", "SIMULATED_DATA", "DATA_UNAVAILABLE"]
+    },
+    "LocationRef": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["label"],
+      "properties": {
+        "label": { "type": "string", "minLength": 1 },
+        "canonical_poi_id": { "type": "string", "minLength": 1 },
+        "entity_precision": { "enum": ["POI", "ENTRANCE", "PICKUP_POINT", "AREA", "UNKNOWN"] },
+        "entrance_verified": { "type": "boolean" },
+        "coordinate": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["longitude", "latitude"],
+          "properties": {
+            "longitude": { "type": "number", "minimum": -180, "maximum": 180 },
+            "latitude": { "type": "number", "minimum": -90, "maximum": 90 }
+          }
+        }
+      }
+    },
+    "TripPreferences": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["focus", "air_option"],
+      "properties": {
+        "focus": { "type": "string", "enum": ["SAFETY_COMFORT", "TIME", "LESS_WALKING", "FEWER_TRANSFERS", "LOW_COST", "BALANCED", "FASTEST", "ECONOMICAL"] },
+        "air_option": { "type": "string", "enum": ["ALLOW_SIMULATION", "GROUND_ONLY", "UNSPECIFIED"] },
+        "max_cost_cny": { "type": ["number", "null"], "minimum": 0 },
+        "max_transfers": { "type": ["integer", "null"], "minimum": 0 }
+      }
+    },
+    "ElderlyProfile": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["mobility", "wheelchair_requirement", "assistance_requirement"],
+      "properties": {
+        "age": { "type": ["integer", "null"], "minimum": 0, "maximum": 120 },
+        "mobility": { "type": "string", "enum": ["NORMAL", "MODERATE", "LIMITED", "ASSISTED", "WHEELCHAIR", "UNKNOWN", "INDEPENDENT"] },
+        "walking_tolerance_m": { "type": ["number", "null"], "minimum": 0 },
+        "wheelchair_requirement": { "type": ["boolean", "null"] },
+        "assistance_requirement": { "type": ["boolean", "null"] },
+        "preferences": { "type": "array", "items": { "type": "string", "minLength": 1 }, "uniqueItems": true }
+      }
+    },
+    "UserRequest": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["origin", "destination", "departure_time", "urgency", "elderly_profile", "preferences"],
+      "properties": {
+        "origin": { "$ref": "#/$defs/LocationRef" },
+        "destination": { "$ref": "#/$defs/LocationRef" },
+        "departure_time": { "type": ["string", "null"], "format": "date-time" },
+        "departure_window": { "$ref": "#/$defs/DepartureWindow" },
+        "city": { "type": "string", "enum": ["TIANJIN", "SHENZHEN"] },
+        "urgency": { "type": "string", "enum": ["NORMAL", "TIME_SENSITIVE", "URGENT_TRAVEL", "MEDICAL_EMERGENCY", "UNKNOWN", "URGENT"] },
+        "elderly_profile": { "$ref": "#/$defs/ElderlyProfile" },
+        "preferences": { "$ref": "#/$defs/TripPreferences" }
+      },
+      "oneOf": [
+        { "properties": { "departure_time": { "type": "string" } }, "not": { "required": ["departure_window"] } },
+        { "required": ["departure_window"], "properties": { "departure_time": { "type": "null" } } }
+      ]
+    },
+    "DepartureWindow": {
+      "type": "object", "additionalProperties": false,
+      "required": ["start", "end", "precision"],
+      "properties": {
+        "start": { "type": "string", "format": "date-time" },
+        "end": { "type": "string", "format": "date-time" },
+        "precision": { "const": "AFTERNOON" }
+      }
+    },
+    "PlanningState": {
+      "type": "object", "additionalProperties": false,
+      "not": { "required": ["departure_time", "departure_window"] },
+      "properties": {
+        "origin": { "$ref": "#/$defs/LocationRef" },
+        "destination": { "$ref": "#/$defs/LocationRef" },
+        "location_candidate": { "$ref": "#/$defs/LocationRef" },
+        "departure_time": { "type": "string", "format": "date-time" },
+        "departure_window": { "$ref": "#/$defs/DepartureWindow" },
+        "city": { "type": "string", "enum": ["TIANJIN", "SHENZHEN"] },
+        "urgency": { "type": "string", "enum": ["NORMAL", "TIME_SENSITIVE", "URGENT_TRAVEL", "MEDICAL_EMERGENCY", "UNKNOWN"] },
+        "elderly_profile": { "$ref": "#/$defs/ElderlyProfile" },
+        "preferences": { "$ref": "#/$defs/TripPreferences" },
+        "pending_clarifications": { "type": "array", "uniqueItems": true, "items": { "type": "string", "enum": ["urgency", "elderly_profile.mobility", "elderly_profile.assistance_requirement", "preferences.focus"] } }
+      }
+    },
+    "TextInterpretRequest": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["text", "reference_time"],
+      "properties": {
+        "text": { "type": "string", "minLength": 1 },
+        "reference_time": { "type": "string", "format": "date-time" },
+        "planning_state": { "$ref": "#/$defs/PlanningState" }
+      }
+    },
+    "InterpretationResult": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["user_request", "needs_summary", "missing_fields", "assumptions"],
+      "properties": {
+        "user_request": { "oneOf": [{ "$ref": "#/$defs/UserRequest" }, { "type": "null" }] },
+        "needs_summary": { "type": "string", "minLength": 1 },
+        "missing_fields": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": { "type": "string", "enum": ["origin", "destination", "departure_time"] }
+        },
+        "assumptions": { "type": "array", "items": { "type": "string", "minLength": 1 } },
+        "interpretation_summary": { "type": "string", "minLength": 1 },
+        "structured_intent": { "$ref": "#/$defs/PlanningState" },
+        "planning_state": { "$ref": "#/$defs/PlanningState" },
+        "uncertain_fields": { "type": "array", "uniqueItems": true, "items": { "type": "string", "enum": ["origin", "destination", "departure_time", "city", "urgency", "elderly_profile.mobility", "elderly_profile.assistance_requirement", "preferences.focus", "location_role"] } },
+        "follow_up_question": { "type": ["string", "null"] },
+        "planning_allowed": { "type": "boolean" }
+      },
+      "allOf": [
+        {
+          "if": { "properties": { "missing_fields": { "maxItems": 0 } }, "required": ["missing_fields"] },
+          "then": {
+            "if": { "properties": { "planning_allowed": { "const": false } }, "required": ["planning_allowed"] },
+            "then": { "properties": { "user_request": { "type": "null" } } },
+            "else": { "properties": { "user_request": { "$ref": "#/$defs/UserRequest" } } }
+          },
+          "else": { "properties": { "user_request": { "type": "null" } } }
+        }
+      ]
+    },
+    "SourceEvidence": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["data_status"],
+      "properties": {
+        "data_status": { "$ref": "#/$defs/DataStatus" },
+        "source_ref": { "type": "string", "minLength": 1 },
+        "observed_at": { "type": "string", "format": "date-time" },
+        "unavailable_reason": { "type": "string", "minLength": 1 }
+      },
+      "allOf": [
+        {
+          "if": { "properties": { "data_status": { "const": "DATA_UNAVAILABLE" } }, "required": ["data_status"] },
+          "then": { "required": ["unavailable_reason"] },
+          "else": { "required": ["source_ref", "observed_at"] }
+        }
+      ]
+    },
+    "Segment": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["segment_type", "origin", "destination", "distance_m", "duration_min", "evidence"],
+      "properties": {
+        "segment_type": { "type": "string", "enum": ["WALK", "CAR", "SHUTTLE", "AIR", "WAIT"] },
+        "origin": { "$ref": "#/$defs/LocationRef" },
+        "destination": { "$ref": "#/$defs/LocationRef" },
+        "distance_m": { "type": ["number", "null"], "minimum": 0 },
+        "duration_min": { "type": ["number", "null"], "minimum": 0 },
+        "evidence": { "$ref": "#/$defs/SourceEvidence" },
+        "geometry": { "$ref": "#/$defs/LineString" },
+        "geometry_status": { "enum": ["PUBLIC_ROUTE_SNAPSHOT", "STRAIGHT_REFERENCE_LINE", "SIMULATED_AIR_CORRIDOR"] },
+        "geometry_evidence": { "$ref": "#/$defs/SourceEvidence" }
+      },
+      "allOf": [
+        { "if": { "anyOf": [{ "required": ["geometry"] }, { "required": ["geometry_status"] }, { "required": ["geometry_evidence"] }] }, "then": { "required": ["geometry", "geometry_status", "geometry_evidence"] } },
+        { "if": { "properties": { "geometry_status": { "const": "PUBLIC_ROUTE_SNAPSHOT" } }, "required": ["geometry_status"] }, "then": { "properties": { "geometry_evidence": { "properties": { "data_status": { "const": "PUBLIC_DATA" } } } } } },
+        { "if": { "properties": { "geometry_status": { "enum": ["STRAIGHT_REFERENCE_LINE", "SIMULATED_AIR_CORRIDOR"] } }, "required": ["geometry_status"] }, "then": { "properties": { "geometry_evidence": { "properties": { "data_status": { "const": "SIMULATED_DATA" } } } } } },
+        { "if": { "properties": { "segment_type": { "const": "AIR" }, "geometry_status": { "type": "string" } }, "required": ["segment_type", "geometry_status"] }, "then": { "properties": { "geometry_status": { "const": "SIMULATED_AIR_CORRIDOR" } } } },
+        { "if": { "properties": { "geometry_status": { "const": "SIMULATED_AIR_CORRIDOR" } }, "required": ["geometry_status"] }, "then": { "properties": { "segment_type": { "const": "AIR" } } } },
+        {
+          "if": { "properties": { "segment_type": { "const": "AIR" } }, "required": ["segment_type"] },
+          "then": {
+            "properties": {
+              "evidence": {
+                "properties": {
+                  "data_status": { "enum": ["SIMULATED_DATA", "DATA_UNAVAILABLE"] }
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "LineString": {
+      "type": "object", "additionalProperties": false,
+      "required": ["type", "coordinates"],
+      "properties": {
+        "type": { "const": "LineString" },
+        "coordinates": { "type": "array", "minItems": 2, "items": { "type": "array", "prefixItems": [{ "type": "number", "minimum": -180, "maximum": 180 }, { "type": "number", "minimum": -90, "maximum": 90 }], "minItems": 2, "maxItems": 2 } }
+      }
+    },
+    "RiskAssessment": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["weather", "mobility", "transfer", "operational", "data_uncertainty", "review_outcome", "reasons"],
+      "properties": {
+        "weather": { "$ref": "#/$defs/RiskLevel" },
+        "mobility": { "$ref": "#/$defs/RiskLevel" },
+        "transfer": { "$ref": "#/$defs/RiskLevel" },
+        "operational": { "$ref": "#/$defs/RiskLevel" },
+        "data_uncertainty": { "$ref": "#/$defs/RiskLevel" },
+        "review_outcome": { "type": "string", "enum": ["PASS", "DOWNGRADE", "REJECT", "UNKNOWN"] },
+        "reasons": { "type": "array", "minItems": 1, "items": { "type": "string", "minLength": 1 } }
+      },
+      "allOf": [
+        {
+          "if": { "properties": { "review_outcome": { "const": "PASS" } }, "required": ["review_outcome"] },
+          "then": {
+            "properties": {
+              "weather": { "enum": ["LOW", "MEDIUM"] },
+              "mobility": { "enum": ["LOW", "MEDIUM"] },
+              "transfer": { "enum": ["LOW", "MEDIUM"] },
+              "operational": { "enum": ["LOW", "MEDIUM"] },
+              "data_uncertainty": { "enum": ["LOW", "MEDIUM"] }
+            }
+          }
+        }
+      ]
+    },
+    "RiskLevel": { "type": "string", "enum": ["LOW", "MEDIUM", "HIGH", "UNKNOWN"] },
+    "RouteOption": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["route_id", "route_type", "display_labels", "total_time_min", "walking_distance_m", "transfer_count", "estimated_cost_cny", "risk_level", "comfort_score", "data_status", "segments", "risk_assessment", "explanation"],
+      "properties": {
+        "route_id": { "type": "string", "minLength": 1 },
+        "route_type": { "type": "string", "enum": ["GROUND_ONLY", "GROUND_AIR_GROUND"] },
+        "display_labels": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": { "type": "string", "enum": ["RECOMMENDED", "SAFETY_COMFORT", "FASTEST", "ECONOMICAL", "SIMULATED_SCENARIO", "UNRANKED"] }
+        },
+        "total_time_min": { "type": ["number", "null"], "minimum": 0 },
+        "walking_distance_m": { "type": ["number", "null"], "minimum": 0 },
+        "transfer_count": { "type": ["integer", "null"], "minimum": 0 },
+        "estimated_cost_cny": { "type": ["number", "null"], "minimum": 0 },
+        "risk_level": { "$ref": "#/$defs/RiskLevel" },
+        "comfort_score": { "type": ["number", "null"], "minimum": 0, "maximum": 100 },
+        "data_status": { "$ref": "#/$defs/DataStatus" },
+        "segments": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/Segment" } },
+        "risk_assessment": { "$ref": "#/$defs/RiskAssessment" },
+        "explanation": { "type": "string", "minLength": 1 }
+      },
+      "allOf": [
+        {
+          "if": { "properties": { "display_labels": { "contains": { "const": "RECOMMENDED" } } }, "required": ["display_labels"] },
+          "then": {
+            "properties": {
+              "route_type": { "const": "GROUND_ONLY" },
+              "data_status": { "enum": ["VERIFIED", "PUBLIC_DATA"] },
+              "risk_assessment": { "properties": { "review_outcome": { "const": "PASS" } } }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": { "data_status": { "enum": ["SIMULATED_DATA", "DATA_UNAVAILABLE"] } },
+            "required": ["data_status"]
+          },
+          "then": {
+            "properties": {
+              "risk_assessment": {
+                "properties": { "review_outcome": { "not": { "const": "PASS" } } }
+              }
+            }
+          }
+        },
+        {
+          "if": { "properties": { "route_type": { "const": "GROUND_AIR_GROUND" } }, "required": ["route_type"] },
+          "then": {
+            "properties": {
+              "segments": { "contains": { "properties": { "segment_type": { "const": "AIR" } }, "required": ["segment_type"] } },
+              "data_status": { "enum": ["SIMULATED_DATA", "DATA_UNAVAILABLE"] },
+              "display_labels": {
+                "contains": { "const": "SIMULATED_SCENARIO" },
+                "not": { "contains": { "const": "RECOMMENDED" } }
+              }
+            }
+          }
+        },
+        {
+          "if": { "properties": { "route_type": { "const": "GROUND_ONLY" } }, "required": ["route_type"] },
+          "then": {
+            "properties": {
+              "segments": { "not": { "contains": { "properties": { "segment_type": { "const": "AIR" } }, "required": ["segment_type"] } } },
+              "display_labels": { "not": { "contains": { "const": "SIMULATED_SCENARIO" } } }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "segments": { "contains": { "properties": { "evidence": { "properties": { "data_status": { "const": "DATA_UNAVAILABLE" } } } } } }
+            }
+          },
+          "then": { "properties": { "data_status": { "const": "DATA_UNAVAILABLE" } } }
+        },
+        {
+          "if": {
+            "properties": {
+              "segments": { "contains": { "properties": { "evidence": { "properties": { "data_status": { "const": "SIMULATED_DATA" } } } } } }
+            }
+          },
+          "then": { "properties": { "data_status": { "enum": ["SIMULATED_DATA", "DATA_UNAVAILABLE"] } } }
+        }
+      ]
+    },
+    "PlanningResult": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["schema_version", "user_request", "needs_summary", "route_options", "warnings"],
+      "properties": {
+        "schema_version": { "const": "0.1-proposal" },
+        "user_request": { "$ref": "#/$defs/UserRequest" },
+        "needs_summary": { "type": "string", "minLength": 1 },
+        "route_options": { "type": "array", "maxItems": 3, "items": { "$ref": "#/$defs/RouteOption" } },
+        "warnings": { "type": "array", "items": { "type": "string", "minLength": 1 } }
+      }
+    }
+  }
+}

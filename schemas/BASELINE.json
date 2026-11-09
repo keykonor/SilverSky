@@ -1,0 +1,25 @@
+{
+  "baseline_id": "2026-10-08-existing-core",
+  "http_version": "0.1-proposal",
+  "hash_algorithm": "sha256-lf",
+  "change_policy": "只在契约提案/必要决定、调用方同步和验证完成后由单一负责人更新；不得自动接受漂移。",
+  "files": [
+    {
+      "path": "schemas/core.v0.1.schema.json",
+      "sha256": "778fd0b0bb075d257e5e3778b45071eca668c024f82adb67e95a2dbac0d1d31f"
+    },
+    {
+      "path": "schemas/datasets.v0.1.schema.json",
+      "sha256": "75c0d6ca309a871745b8bda4bb72f4c926d058d7c2c72a8a339026d6be283f47"
+    },
+    {
+      "path": "frontend/src/types/contracts.ts",
+      "sha256": "43229ce682c3eede0df2f0dbfd667f6bb418f8f930f022c4d743f23ada7d6089"
+    }
+  ],
+  "not_covered": [
+    "R-001/R-002 独立机器 Schema 尚缺",
+    "前端派生视图类型未全部覆盖",
+    "哈希不是所有字段语义等价证明"
+  ]
+}

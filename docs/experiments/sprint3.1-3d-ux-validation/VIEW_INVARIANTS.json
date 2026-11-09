@@ -1,0 +1,13 @@
+{
+  "evidenceType": "AUTOMATED_EVIDENCE",
+  "city": "天津",
+  "planningResultSha256": "e44d11e2f5d540baaff6d3ef0dde2e3769ff4aefcbb3c00fd3d93e883a833a30",
+  "selectedRouteId": "TJ-001-AIR-SIM",
+  "routeType": "GROUND_AIR_GROUND",
+  "safetyOutcome": "REJECT",
+  "planCalls": 1,
+  "viewToggles": 8,
+  "routeDetailsStable": true,
+  "mapSafetyFollowsRouteSelection": true,
+  "simulatedAltitudeInPlanningResult": false
+}

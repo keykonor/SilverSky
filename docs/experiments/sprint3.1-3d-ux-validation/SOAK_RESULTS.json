@@ -1,0 +1,319 @@
+{
+  "environment": {
+    "browser": "local Chrome headless",
+    "viewport": "1440x900 CSS",
+    "reducedMotion": true
+  },
+  "startedAt": "2026-09-29T04:37:37.156Z",
+  "endedAt": "2026-09-29T05:07:37.180Z",
+  "durationMinutes": 30,
+  "requiredCycles": 30,
+  "completedCycles": 30,
+  "events": {
+    "pageErrors": 0,
+    "consoleErrors": 1,
+    "webglContextLost": 0
+  },
+  "samples": [
+    {
+      "cycle": 1,
+      "city": "天津",
+      "elapsedSeconds": 3,
+      "heapBytes": 82242534,
+      "viewerCount": 1,
+      "webglContextLost": 0,
+      "routeCount": 2,
+      "issue": null
+    },
+    {
+      "cycle": 2,
+      "city": "深圳",
+      "elapsedSeconds": 61,
+      "heapBytes": 95938041,
+      "viewerCount": 1,
+      "webglContextLost": 0,
+      "routeCount": 2,
+      "issue": null
+    },
+    {
+      "cycle": 3,
+      "city": "天津",
+      "elapsedSeconds": 121,
+      "heapBytes": 92027998,
+      "viewerCount": 1,
+      "webglContextLost": 0,
+      "routeCount": 2,
+      "issue": null
+    },
+    {
+      "cycle": 4,
+      "city": "深圳",
+      "elapsedSeconds": 181,
+      "heapBytes": 99628753,
+      "viewerCount": 1,
+      "webglContextLost": 0,
+      "routeCount": 2,
+      "issue": null
+    },
+    {
+      "cycle": 5,
+      "city": "天津",
+      "elapsedSeconds": 241,
+      "heapBytes": 121175297,
+      "viewerCount": 1,
+      "webglContextLost": 0,
+      "routeCount": 2,
+      "issue": null
+    },
+    {
+      "cycle": 6,
+      "city": "深圳",
+      "elapsedSeconds": 301,
+      "heapBytes": 117829193,
+      "viewerCount": 1,
+      "webglContextLost": 0,
+      "routeCount": 2,
+      "issue": null
+    },
+    {
+      "cycle": 7,
+      "city": "天津",
+      "elapsedSeconds": 361,
+      "heapBytes": 97918070,
+      "viewerCount": 1,
+      "webglContextLost": 0,
+      "routeCount": 2,
+      "issue": null
+    },
+    {
+      "cycle": 8,
+      "city": "深圳",
+      "elapsedSeconds": 421,
+      "heapBytes": 119587476,
+      "viewerCount": 1,
+      "webglContextLost": 0,
+      "routeCount": 2,
+      "issue": null
+    },
+    {
+      "cycle": 9,
+      "city": "天津",
+      "elapsedSeconds": 481,
+      "heapBytes": 118419566,
+      "viewerCount": 1,
+      "webglContextLost": 0,
+      "routeCount": 2,
+      "issue": null
+    },
+    {
+      "cycle": 10,
+      "city": "深圳",
+      "elapsedSeconds": 541,
+      "heapBytes": 114495050,
+      "viewerCount": 1,
+      "webglContextLost": 0,
+      "routeCount": 2,
+      "issue": null
+    },
+    {
+      "cycle": 11,
+      "city": "天津",
+      "elapsedSeconds": 601,
+      "heapBytes": 98532702,
+      "viewerCount": 1,
+      "webglContextLost": 0,
+      "routeCount": 2,
+      "issue": null
+    },
+    {
+      "cycle": 12,
+      "city": "深圳",
+      "elapsedSeconds": 661,
+      "heapBytes": 114719032,
+      "viewerCount": 1,
+      "webglContextLost": 0,
+      "routeCount": 2,
+      "issue": null
+    },
+    {
+      "cycle": 13,
+      "city": "天津",
+      "elapsedSeconds": 721,
+      "heapBytes": 116508770,
+      "viewerCount": 1,
+      "webglContextLost": 0,
+      "routeCount": 2,
+      "issue": null
+    },
+    {
+      "cycle": 14,
+      "city": "深圳",
+      "elapsedSeconds": 781,
+      "heapBytes": 122489684,
+      "viewerCount": 1,
+      "webglContextLost": 0,
+      "routeCount": 2,
+      "issue": null
+    },
+    {
+      "cycle": 15,
+      "city": "天津",
+      "elapsedSeconds": 841,
+      "heapBytes": 91443462,
+      "viewerCount": 1,
+      "webglContextLost": 0,
+      "routeCount": 2,
+      "issue": null
+    },
+    {
+      "cycle": 16,
+      "city": "深圳",
+      "elapsedSeconds": 901,
+      "heapBytes": 94931743,
+      "viewerCount": 1,
+      "webglContextLost": 0,
+      "routeCount": 2,
+      "issue": null
+    },
+    {
+      "cycle": 17,
+      "city": "天津",
+      "elapsedSeconds": 961,
+      "heapBytes": 91700255,
+      "viewerCount": 1,
+      "webglContextLost": 0,
+      "routeCount": 2,
+      "issue": null
+    },
+    {
+      "cycle": 18,
+      "city": "深圳",
+      "elapsedSeconds": 1021,
+      "heapBytes": 91841069,
+      "viewerCount": 1,
+      "webglContextLost": 0,
+      "routeCount": 2,
+      "issue": null
+    },
+    {
+      "cycle": 19,
+      "city": "天津",
+      "elapsedSeconds": 1081,
+      "heapBytes": 92263499,
+      "viewerCount": 1,
+      "webglContextLost": 0,
+      "routeCount": 2,
+      "issue": null
+    },
+    {
+      "cycle": 20,
+      "city": "深圳",
+      "elapsedSeconds": 1141,
+      "heapBytes": 95146726,
+      "viewerCount": 1,
+      "webglContextLost": 0,
+      "routeCount": 2,
+      "issue": null
+    },
+    {
+      "cycle": 21,
+      "city": "天津",
+      "elapsedSeconds": 1201,
+      "heapBytes": 92833900,
+      "viewerCount": 1,
+      "webglContextLost": 0,
+      "routeCount": 2,
+      "issue": null
+    },
+    {
+      "cycle": 22,
+      "city": "深圳",
+      "elapsedSeconds": 1261,
+      "heapBytes": 99749732,
+      "viewerCount": 1,
+      "webglContextLost": 0,
+      "routeCount": 2,
+      "issue": null
+    },
+    {
+      "cycle": 23,
+      "city": "天津",
+      "elapsedSeconds": 1321,
+      "heapBytes": 97943181,
+      "viewerCount": 1,
+      "webglContextLost": 0,
+      "routeCount": 2,
+      "issue": null
+    },
+    {
+      "cycle": 24,
+      "city": "深圳",
+      "elapsedSeconds": 1381,
+      "heapBytes": 96961329,
+      "viewerCount": 1,
+      "webglContextLost": 0,
+      "routeCount": 2,
+      "issue": null
+    },
+    {
+      "cycle": 25,
+      "city": "天津",
+      "elapsedSeconds": 1441,
+      "heapBytes": 97640008,
+      "viewerCount": 1,
+      "webglContextLost": 0,
+      "routeCount": 2,
+      "issue": null
+    },
+    {
+      "cycle": 26,
+      "city": "深圳",
+      "elapsedSeconds": 1501,
+      "heapBytes": 98666354,
+      "viewerCount": 1,
+      "webglContextLost": 0,
+      "routeCount": 2,
+      "issue": null
+    },
+    {
+      "cycle": 27,
+      "city": "天津",
+      "elapsedSeconds": 1561,
+      "heapBytes": 97525060,
+      "viewerCount": 1,
+      "webglContextLost": 0,
+      "routeCount": 2,
+      "issue": null
+    },
+    {
+      "cycle": 28,
+      "city": "深圳",
+      "elapsedSeconds": 1643,
+      "heapBytes": 87233844,
+      "viewerCount": 1,
+      "webglContextLost": 0,
+      "routeCount": 2,
+      "issue": null
+    },
+    {
+      "cycle": 29,
+      "city": "天津",
+      "elapsedSeconds": 1694,
+      "heapBytes": 94364601,
+      "viewerCount": 1,
+      "webglContextLost": 0,
+      "routeCount": 2,
+      "issue": null
+    },
+    {
+      "cycle": 30,
+      "city": "深圳",
+      "elapsedSeconds": 1755,
+      "heapBytes": 90423840,
+      "viewerCount": 1,
+      "webglContextLost": 0,
+      "routeCount": 2,
+      "issue": null
+    }
+  ]
+}

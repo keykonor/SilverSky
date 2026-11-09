@@ -1,0 +1,43 @@
+{
+  "kind": "PUBLIC_POIS",
+  "scenario_id": "TJ-001",
+  "city": "TIANJIN",
+  "data_status": "PUBLIC_DATA",
+  "fetched_at": "2026-09-26T16:06:06Z",
+  "attribution": "© OpenStreetMap contributors",
+  "license_url": "https://www.openstreetmap.org/copyright",
+  "pois": [
+    {
+      "poi_id": "tj-university-weijin",
+      "name": "天津大学卫津路校区",
+      "address": "天津市南开区卫津路92号",
+      "official_source_url": "https://tju.edu.cn/tdgk/tdxq/wjlxq.htm",
+      "coordinate": {
+        "longitude": 117.164728,
+        "latitude": 39.1087675
+      },
+      "coordinate_kind": "OSM_OBJECT_CENTROID_NOT_ENTRANCE",
+      "osm_ref": "way/48165383",
+      "coordinate_source_url": "https://www.openstreetmap.org/way/48165383",
+      "data_status": "PUBLIC_DATA",
+      "source_ref": "https://www.openstreetmap.org/way/48165383",
+      "observed_at": "2026-09-26T16:06:06Z"
+    },
+    {
+      "poi_id": "tj-general-hospital",
+      "name": "天津医科大学总医院",
+      "address": "天津市和平区鞍山道154号",
+      "official_source_url": "https://www.tj.gov.cn/zwgk/ggqsydwxxgk/ylws/yy/202409/t20240923_6737587.html",
+      "coordinate": {
+        "longitude": 117.1783982,
+        "latitude": 39.1165863
+      },
+      "coordinate_kind": "OSM_OBJECT_CENTROID_NOT_ENTRANCE",
+      "osm_ref": "way/216874872",
+      "coordinate_source_url": "https://www.openstreetmap.org/way/216874872",
+      "data_status": "PUBLIC_DATA",
+      "source_ref": "https://www.openstreetmap.org/way/216874872",
+      "observed_at": "2026-09-26T16:06:06Z"
+    }
+  ]
+}

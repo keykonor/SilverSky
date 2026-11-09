@@ -1,0 +1,97 @@
+{
+  "kind": "GOLDEN_ALIAS_REGISTRY",
+  "data_status": "PUBLIC_DATA",
+  "fetched_at": "2026-09-27T05:55:00Z",
+  "aliases": [
+    {
+      "alias": "天津大学",
+      "canonical_id": "tj-university-weijin",
+      "canonical_name": "天津大学卫津路校区",
+      "city": "TIANJIN",
+      "scenario_id": "TJ-001",
+      "data_status": "PUBLIC_DATA",
+      "source_ref": "https://tju.edu.cn/tdgk/tdxq/wjlxq.htm",
+      "precision": "POI"
+    },
+    {
+      "alias": "天大",
+      "canonical_id": "tj-university-weijin",
+      "canonical_name": "天津大学卫津路校区",
+      "city": "TIANJIN",
+      "scenario_id": "TJ-001",
+      "data_status": "PUBLIC_DATA",
+      "source_ref": "https://tju.edu.cn/tdgk/tdxq/wjlxq.htm",
+      "precision": "POI"
+    },
+    {
+      "alias": "天津大学卫津路校区",
+      "canonical_id": "tj-university-weijin",
+      "canonical_name": "天津大学卫津路校区",
+      "city": "TIANJIN",
+      "scenario_id": "TJ-001",
+      "data_status": "PUBLIC_DATA",
+      "source_ref": "https://tju.edu.cn/tdgk/tdxq/wjlxq.htm",
+      "precision": "POI"
+    },
+    {
+      "alias": "天津医大总医院",
+      "canonical_id": "tj-general-hospital",
+      "canonical_name": "天津医科大学总医院",
+      "city": "TIANJIN",
+      "scenario_id": "TJ-001",
+      "data_status": "PUBLIC_DATA",
+      "source_ref": "https://www.tj.gov.cn/zwgk/ggqsydwxxgk/ylws/yy/202409/t20240923_6737587.html",
+      "precision": "POI"
+    },
+    {
+      "alias": "天津医科大学总医院",
+      "canonical_id": "tj-general-hospital",
+      "canonical_name": "天津医科大学总医院",
+      "city": "TIANJIN",
+      "scenario_id": "TJ-001",
+      "data_status": "PUBLIC_DATA",
+      "source_ref": "https://www.tj.gov.cn/zwgk/ggqsydwxxgk/ylws/yy/202409/t20240923_6737587.html",
+      "precision": "POI"
+    },
+    {
+      "alias": "深圳养老护理院",
+      "canonical_id": "sz-elder-care",
+      "canonical_name": "深圳市养老护理院",
+      "city": "SHENZHEN",
+      "scenario_id": "SZ-001",
+      "data_status": "PUBLIC_DATA",
+      "source_ref": "https://www.sz.gov.cn/szzt2010/szyl/ylfw/jgylfw/yljgcx/content/mpost_11992149.html",
+      "precision": "POI"
+    },
+    {
+      "alias": "深圳市养老护理院",
+      "canonical_id": "sz-elder-care",
+      "canonical_name": "深圳市养老护理院",
+      "city": "SHENZHEN",
+      "scenario_id": "SZ-001",
+      "data_status": "PUBLIC_DATA",
+      "source_ref": "https://www.sz.gov.cn/szzt2010/szyl/ylfw/jgylfw/yljgcx/content/mpost_11992149.html",
+      "precision": "POI"
+    },
+    {
+      "alias": "北大深圳医院",
+      "canonical_id": "sz-pku-hospital",
+      "canonical_name": "北京大学深圳医院",
+      "city": "SHENZHEN",
+      "scenario_id": "SZ-001",
+      "data_status": "PUBLIC_DATA",
+      "source_ref": "https://www.sz.gov.cn/hospital/ssyy/bjdxszyy/content/post_9370612.html",
+      "precision": "POI"
+    },
+    {
+      "alias": "北京大学深圳医院",
+      "canonical_id": "sz-pku-hospital",
+      "canonical_name": "北京大学深圳医院",
+      "city": "SHENZHEN",
+      "scenario_id": "SZ-001",
+      "data_status": "PUBLIC_DATA",
+      "source_ref": "https://www.sz.gov.cn/hospital/ssyy/bjdxszyy/content/post_9370612.html",
+      "precision": "POI"
+    }
+  ]
+}

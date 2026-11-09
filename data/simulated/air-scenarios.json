@@ -1,0 +1,83 @@
+{
+  "kind": "SIMULATED_AIR_SCENARIOS",
+  "data_status": "SIMULATED_DATA",
+  "generated_at": "2026-09-26T16:06:06Z",
+  "scenarios": [
+    {
+      "scenario_id": "TJ-001",
+      "city": "TIANJIN",
+      "data_status": "SIMULATED_DATA",
+      "vertiport_a": "天津 Golden Demo 模拟起降点 A",
+      "vertiport_b": "天津 Golden Demo 模拟起降点 B",
+      "air_duration_min": 6,
+      "weather": "CLEAR_SCENARIO",
+      "operational_status": "NOT_REAL_OPERATION",
+      "price_status": "DATA_UNAVAILABLE",
+      "disclaimer": "仅为低空规划情景演示；无真实起降点、航班、空域或可飞性依据。",
+      "simulated_vertiports": [
+        {
+          "id": "TJ-001-SIM-VP-A",
+          "name": "天津 Golden Demo 模拟起降点 A",
+          "city": "TIANJIN",
+          "scenario_purpose": "Golden Scenario 地图演示；无真实设施或运营含义",
+          "coordinate": {
+            "longitude": 117.169,
+            "latitude": 39.111
+          },
+          "coordinate_is_synthetic": true,
+          "data_status": "SIMULATED_DATA"
+        },
+        {
+          "id": "TJ-001-SIM-VP-B",
+          "name": "天津 Golden Demo 模拟起降点 B",
+          "city": "TIANJIN",
+          "scenario_purpose": "Golden Scenario 地图演示；无真实设施或运营含义",
+          "coordinate": {
+            "longitude": 117.174,
+            "latitude": 39.113
+          },
+          "coordinate_is_synthetic": true,
+          "data_status": "SIMULATED_DATA"
+        }
+      ]
+    },
+    {
+      "scenario_id": "SZ-001",
+      "city": "SHENZHEN",
+      "data_status": "SIMULATED_DATA",
+      "vertiport_a": "深圳 Golden Demo 模拟起降点 A",
+      "vertiport_b": "深圳 Golden Demo 模拟起降点 B",
+      "air_duration_min": 12,
+      "weather": "CLEAR_SCENARIO",
+      "operational_status": "NOT_REAL_OPERATION",
+      "price_status": "DATA_UNAVAILABLE",
+      "disclaimer": "仅为低空规划情景演示；无真实起降点、航班、空域或可飞性依据。",
+      "simulated_vertiports": [
+        {
+          "id": "SZ-001-SIM-VP-A",
+          "name": "深圳 Golden Demo 模拟起降点 A",
+          "city": "SHENZHEN",
+          "scenario_purpose": "Golden Scenario 地图演示；无真实设施或运营含义",
+          "coordinate": {
+            "longitude": 113.99,
+            "latitude": 22.563
+          },
+          "coordinate_is_synthetic": true,
+          "data_status": "SIMULATED_DATA"
+        },
+        {
+          "id": "SZ-001-SIM-VP-B",
+          "name": "深圳 Golden Demo 模拟起降点 B",
+          "city": "SHENZHEN",
+          "scenario_purpose": "Golden Scenario 地图演示；无真实设施或运营含义",
+          "coordinate": {
+            "longitude": 114.03,
+            "latitude": 22.56
+          },
+          "coordinate_is_synthetic": true,
+          "data_status": "SIMULATED_DATA"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "evidenceType": "AUTOMATED_EVIDENCE",
+  "fault": "AMap loader aborted and WebGL disabled",
+  "routeCount": 2,
+  "selectedSafety": "正在查看：模拟低空情景。安全审查：当前不建议采用",
+  "mapNotice": "地图视角\n真实城市地图\n立体旅程示意\n正在查看：模拟低空情景。安全审查：当前不建议采用\n高德与三维地图均不可用；请阅读路线文字说明。",
+  "issue": null
+}

@@ -1,0 +1,630 @@
+{
+  "format_version": 1,
+  "recorded_on": "2026-11-07",
+  "coverage": {
+    "current_chat": "记录当前上下文可见的用户请求与确认；长文原始留存范围逐项注明。",
+    "referenced_chat": "chatgpt-conversation://6ac67974-1c0c-83ea-b5b0-19824dd6bf9e",
+    "referenced_chat_access": "TRUNCATED_PREVIEW_ONLY",
+    "full_history_complete": false,
+    "missing": "引用对话全文及其他未提供的历史对话未获取，不能宣称每一次历史需求均已完整归档。",
+    "exclusions": "助手建议不自动等于用户需求；无真实个人数据、凭据或未核验运营事实。"
+  },
+  "requests": [
+    {
+      "id": "REQ-001",
+      "observed_on": "2026-10-08",
+      "original_date": null,
+      "source_kind": "REFERENCED_CHAT_PREVIEW",
+      "source_ref": "chatgpt-conversation://6ac67974-1c0c-83ea-b5b0-19824dd6bf9e",
+      "original_text": "这是现在的agent.md，我希望精简，删去不必要的内容，达到你认为的最佳文档，然后主要希望能够将项目落地，包括上市，所以先不用搞的很高级",
+      "capture_scope": "仅保留预览可见的请求句；后附旧 AGENTS.md 在预览中截断。上市含义未进一步澄清，不能据此承诺证券上市或直接公开部署。",
+      "acceptance": "保持简单 MVP；规则围绕运行、验证、部署准备，不引入复杂基础设施。",
+      "status": "RECORDED",
+      "related_files": [
+        "AGENTS.md",
+        "docs/DEVELOPMENT.md"
+      ]
+    },
+    {
+      "id": "REQ-002",
+      "observed_on": "2026-10-08",
+      "original_date": null,
+      "source_kind": "REFERENCED_CHAT_PREVIEW",
+      "source_ref": "chatgpt-conversation://6ac67974-1c0c-83ea-b5b0-19824dd6bf9e",
+      "original_text": "1. 项目结构和关键目录\n2. 启动、测试、lint 命令\n3. 哪些文件可以改，哪些不能动\n4. 核心架构约束\n5. API / Schema 不能随便改\n6. 新功能必须补测试\n7. 禁止删除测试来“修复”问题\n8. `.env` / API Key 不能提交\n9. 修改前先读哪些文档\n10. 完成后必须汇报哪些内容；主要按照这个逻辑来写",
+      "capture_scope": "预览中该条用户请求完整可见；助手草稿不作为新功能授权。",
+      "acceptance": "AGENTS.md 覆盖十项约束，命令与实际项目一致。",
+      "status": "RECORDED",
+      "related_files": [
+        "AGENTS.md"
+      ]
+    },
+    {
+      "id": "REQ-003",
+      "observed_on": "2026-10-08",
+      "original_date": null,
+      "source_kind": "REFERENCED_CHAT_PREVIEW",
+      "source_ref": "chatgpt-conversation://6ac67974-1c0c-83ea-b5b0-19824dd6bf9e",
+      "original_text": "把该文档转换成markdown格式，我可以直接复制进去",
+      "capture_scope": "保留请求句；后附大段草稿在预览中截断，没有假定已获取全文。",
+      "acceptance": "提供可复制、代码围栏完整的 Markdown 文件。",
+      "status": "RECORDED",
+      "related_files": [
+        "AGENTS.md"
+      ]
+    },
+    {
+      "id": "REQ-004",
+      "observed_on": "2026-10-08",
+      "original_date": null,
+      "source_kind": "CURRENT_CHAT",
+      "source_ref": "当前对话：Git 管理请求",
+      "original_text": "把整个项目正式改成 Git 仓库管理，并把之前的3个大版本分别放入对应的文件夹",
+      "capture_scope": "完整请求句可见。",
+      "acceptance": "保留历史；根目录当前开发版，三个归档有源提交与校验。",
+      "status": "IMPLEMENTED_WITH_EVIDENCE",
+      "related_files": [
+        "docs/GIT_MANAGEMENT.md",
+        "versions/manifest.json",
+        "scripts/verify_version_archives.py",
+        "docs/handoffs/2026-10-08-git-version-archives.md"
+      ]
+    },
+    {
+      "id": "REQ-005",
+      "observed_on": "2026-10-08",
+      "original_date": null,
+      "source_kind": "CURRENT_CHAT",
+      "source_ref": "当前对话：归档方案确认",
+      "original_text": "按此方案归档（推荐）",
+      "capture_scope": "对应问题：Sprint 1/2/3 分版；Sprint 1.5 入第 1 版，Sprint 3.1/3.2 入第 3 版，根目录保留开发版。",
+      "acceptance": "归档范围与确认方案一致；混合源提交的限制如实注明。",
+      "status": "IMPLEMENTED_WITH_EVIDENCE",
+      "related_files": [
+        "versions/README.md",
+        "docs/handoffs/2026-10-08-git-version-archives.md"
+      ]
+    },
+    {
+      "id": "REQ-006",
+      "observed_on": "2026-10-08",
+      "original_date": null,
+      "source_kind": "CURRENT_CHAT",
+      "source_ref": "当前对话：规则文档请求",
+      "original_text": "给出该项目的`AGENTS.md`",
+      "capture_scope": "完整请求句可见。",
+      "acceptance": "根目录提供完整有效 AGENTS.md。",
+      "status": "RECORDED",
+      "related_files": [
+        "AGENTS.md"
+      ]
+    },
+    {
+      "id": "REQ-007",
+      "observed_on": "2026-10-08",
+      "original_date": null,
+      "source_kind": "LOCAL_FILE_SNAPSHOT",
+      "source_ref": "docs/requirements/sources/2026-10-08-user-agents-draft.md",
+      "original_text": "用户提交了 SilverSky AI 14 章 AGENTS.md 草稿。",
+      "capture_scope": "长文留存为上一轮文件快照，部分标题当时缺失；original_text 此处为索引说明，不冒称逐字全文。",
+      "acceptance": "在用户草稿基础上修订；不把旧路径/枚举当当前契约。",
+      "status": "RECORDED",
+      "related_files": [
+        "docs/requirements/sources/2026-10-08-user-agents-draft.md",
+        "AGENTS.md"
+      ]
+    },
+    {
+      "id": "REQ-008",
+      "observed_on": "2026-10-08",
+      "original_date": null,
+      "source_kind": "CURRENT_CHAT",
+      "source_ref": "当前对话：规则验证请求",
+      "original_text": "验证新的agent.md",
+      "capture_scope": "完整请求句可见。",
+      "acceptance": "核对实际目录、命令、接口与安全约束，记录具体问题。",
+      "status": "IMPLEMENTED_WITH_EVIDENCE",
+      "related_files": [
+        "docs/handoffs/2026-10-08-agents-md-validation.md"
+      ]
+    },
+    {
+      "id": "REQ-009",
+      "observed_on": "2026-10-08",
+      "original_date": null,
+      "source_kind": "CURRENT_CHAT",
+      "source_ref": "当前对话：规则最小修订授权",
+      "original_text": "按照你建议修改的进行修改，不改变其他未提及的部分，最后呈现出完整可用的agent.md",
+      "capture_scope": "完整请求句可见；对应上一轮 A01–A08。",
+      "acceptance": "仅实施审查提出的修订，保留其余草稿；提供完整文件与验证。",
+      "status": "IMPLEMENTED_WITH_EVIDENCE",
+      "related_files": [
+        "AGENTS.md",
+        "docs/handoffs/2026-10-08-agents-md-revision.md"
+      ]
+    },
+    {
+      "id": "REQ-010",
+      "observed_on": "2026-10-08",
+      "original_date": null,
+      "source_kind": "CURRENT_CHAT",
+      "source_ref": "chatgpt-conversation://6ac67974-1c0c-83ea-b5b0-19824dd6bf9e",
+      "original_text": "阅读这一段对话：还有哪些是vibe coding需要提前准备的；并完成这些任务，包括但不限于README 不要只写项目介绍，要写“怎么跑起来”同时写清楚前端地址、后端地址、环境变量、测试命令；把“需求”从聊天记录变成项目文件，把我提的每一次需求都放在文件当中；这种项目必须尽早固定 Schema；让不同 Subagent 有明确边界",
+      "capture_scope": "完整当前请求可见；引用历史仅有截断预览，没有全文读取工具。",
+      "acceptance": "README 可照步骤启动；可见请求逐条入账、历史缺口明确；现有核心 Schema/类型基线可校验；分工及唯一写入边界清晰；提供本地预检与交接。",
+      "status": "PARTIAL_WITH_EVIDENCE",
+      "related_files": [
+        "README.md",
+        "docs/requirements/README.md",
+        "docs/requirements/requests.json",
+        "docs/DEVELOPMENT.md",
+        "schemas/README.md",
+        "schemas/BASELINE.json",
+        "scripts/check_project_ready.py",
+        "docs/handoffs/2026-10-08-vibe-coding-readiness.md",
+        "docs/evidence/vibe-coding/2026-10-08-verification.json"
+      ],
+      "delivery_note": "README、台账机制、现有契约基线、开发边界和预检已落地验证；无法获取引用对话全文，不能宣称历史请求全部收齐。"
+    },
+    {
+      "id": "REQ-011",
+      "observed_on": "2026-10-08",
+      "original_date": null,
+      "source_kind": "CURRENT_CHAT",
+      "source_ref": "当前对话：AGENTS.md instructions（环境消息中的用户规则）",
+      "original_text": "用户提供本仓库 AGENTS.md instructions，要求任务相关必读/Skills、安全边界、资料审计与每轮交接。",
+      "capture_scope": "这是规则摘要；完整规则已由用户在当前对话提供，不能当作新的产品功能要求。",
+      "acceptance": "按用户约束完成本轮审计、交接与状态记录。",
+      "status": "RECORDED",
+      "related_files": [
+        "AGENTS.md",
+        "docs/HANDOFF.md"
+      ]
+    },
+    {
+      "id": "REQ-012",
+      "observed_on": "2026-10-08",
+      "original_date": "2026-10-08",
+      "source_kind": "CURRENT_CHAT",
+      "source_ref": "docs/requirements/sources/2026-10-08-v2-mvp.md",
+      "original_text": "SilverSky V2 — 最小可用版本开发总指令（10 节逐项摘要见 source_ref）",
+      "capture_scope": "保存全部十节的忠实需求摘要；非逐字聊天导出。",
+      "acceptance": "A文字/B真实语音/C歧义/D故障；六阶段实际运行证据，Windows Chrome/Edge 可用，保留旧版。",
+      "status": "PARTIAL_WITH_EVIDENCE",
+      "related_files": [
+        "docs/requirements/sources/2026-10-08-v2-mvp.md",
+        "backend/v2.py",
+        "backend/v2_geo.py",
+        "frontend/src/v2/MvpApp.tsx",
+        "docs/handoffs/2026-10-08-v2-mvp.md"
+      ]
+    },
+    {
+      "id": "REQ-013",
+      "observed_on": "2026-10-08",
+      "original_date": "2026-10-08",
+      "source_kind": "CURRENT_CHAT",
+      "source_ref": "当前对话：V2实际试用反馈",
+      "original_text": "能进行语音撰写规划，3d地图无法正常使用，模糊地点可以要直接点击就开始规划路线",
+      "capture_scope": "完整反馈句；REQ-014附截图由当前上下文查看，含公开地点天眼→西站北广场，不复制原始私人截图进Git。",
+      "acceptance": "记录真人语音转写规划成功；修复3D可用性；歧义起终点经用户点齐后立即请求路线，未选齐不规划。",
+      "status": "IMPLEMENTED_WITH_EVIDENCE",
+      "related_files": [
+        "frontend/src/v2/MvpApp.tsx",
+        "frontend/src/v2/CityScene.tsx",
+        "docs/handoffs/2026-10-08-v2-feedback-map-time.md",
+        "frontend/src/v2/DeparturePlan.tsx",
+        "frontend/tests/v2-feedback.mjs"
+      ]
+    },
+    {
+      "id": "REQ-014",
+      "observed_on": "2026-10-08",
+      "original_date": "2026-10-08",
+      "source_kind": "CURRENT_CHAT",
+      "source_ref": "当前对话：V2实际试用反馈",
+      "original_text": "没有地图信息，没有时间规划",
+      "capture_scope": "完整反馈句；REQ-014附截图由当前上下文查看，含公开地点天眼→西站北广场，不复制原始私人截图进Git。",
+      "acceptance": "以用户提供的3D截图为复现：修复城市道路/地名底图，增加可编辑出发时间及基于真实地面行驶耗时的预计到达，空中不造运营耗时。",
+      "status": "IMPLEMENTED_WITH_EVIDENCE",
+      "related_files": [
+        "frontend/src/v2/MvpApp.tsx",
+        "frontend/src/v2/CityScene.tsx",
+        "docs/handoffs/2026-10-08-v2-feedback-map-time.md",
+        "frontend/src/v2/DeparturePlan.tsx",
+        "frontend/tests/v2-feedback.mjs"
+      ]
+    },
+    {
+      "id": "REQ-015",
+      "observed_on": "2026-10-08",
+      "original_date": null,
+      "source_kind": "CURRENT_CHAT",
+      "source_ref": "当前对话",
+      "original_text": "能否加载3d城市模型",
+      "capture_scope": "当前用户完整请求；模型细节可选澄清未答时，沿用REQ-012基础城市建筑体块，不推定同意付费或实景纹理采购。",
+      "acceptance": "在现有Cesium中实际加载可获取的真实建筑轮廓体块，改善起终点街区覆盖与视角，显示未知高度示意及局部覆盖限制；失败不造楼。",
+      "status": "IMPLEMENTED_WITH_EVIDENCE",
+      "related_files": [
+        "frontend/src/v2/CityScene.tsx",
+        "frontend/src/v2/useCityBuildings.ts",
+        "backend/v2.py",
+        "docs/INTERFACES.md",
+        "frontend/tests/v2-city.mjs",
+        "docs/handoffs/2026-10-08-v2-city-model.md"
+      ]
+    },
+    {
+      "id": "REQ-016",
+      "observed_on": "2026-11-06",
+      "original_date": null,
+      "source_kind": "CURRENT_CHAT",
+      "source_ref": "当前对话",
+      "original_text": "把市场上世面上的载人载物无人机加载到本页面，单独开一个索引页面，点击进入可以看到这些无人机产品，这些产品显示需要用图片，型号，生产公司，主要性能，页面设计用figma，找到产品矩阵页面套用",
+      "capture_scope": "完整当前请求；用户随后明确首批范围为“国内为主，补充国外代表型号”。",
+      "acceptance": "现有页面新增独立产品索引入口；真实产品图片/型号/公司/性能，搜索筛选与详情可用；实际Figma套用产品矩阵模板并提供设计链接；资料保留官方来源、日期、工况和上市/研发/驾驶方式区分，不接入真实航空运营。",
+      "status": "IMPLEMENTED_WITH_EVIDENCE",
+      "related_files": [
+        "frontend/src/catalog/CatalogPage.tsx",
+        "frontend/src/catalog/catalog.css",
+        "frontend/src/catalog/products.json",
+        "frontend/public/aircraft-images/SOURCES.md",
+        "frontend/tests/catalog.mjs",
+        "docs/handoffs/2026-11-06-aircraft-catalog.md"
+      ]
+    },
+    {
+      "id": "REQ-017",
+      "observed_on": "2026-11-07",
+      "original_date": null,
+      "source_kind": "CURRENT_CHAT",
+      "source_ref": "当前对话",
+      "original_text": "把现在的版本定义为v3",
+      "capture_scope": "用户完整原话；当前工作区产品版本命名，不据此推定公网发布或覆盖旧Sprint3归档。",
+      "acceptance": "当前版正式标识SilverSky V3（3.0.0），同步版本号、页面与项目状态；保留现有功能、稳定API及冻结历史版本。",
+      "status": "IMPLEMENTED_WITH_EVIDENCE",
+      "related_files": [
+        "VERSION",
+        "frontend/package.json",
+        "frontend/src/version.ts",
+        "docs/releases/v3.0.0.md",
+        "frontend/package-lock.json",
+        "frontend/index.html",
+        "frontend/src/v2/MvpApp.tsx",
+        "frontend/src/catalog/CatalogPage.tsx",
+        "docs/handoffs/2026-11-07-v3-version-definition.md"
+      ]
+    },
+    {
+      "id": "REQ-018",
+      "observed_on": "2026-11-07",
+      "original_date": null,
+      "source_kind": "CURRENT_CHAT",
+      "source_ref": "当前对话",
+      "original_text": "把首页的3d地图补充上，接入开源数据库3d地图模型",
+      "capture_scope": "完整用户原话；REQ-019为对模型效果的明确选择。",
+      "acceptance": "无行程可打开首页3D；天津/深圳真实街区及当前视野建筑按需加载，无新增密钥；标注OSM/ODbL、时间、有限覆盖及未知高度；失败可重试，规划和二维保留。",
+      "status": "IMPLEMENTED_WITH_EVIDENCE",
+      "related_files": [
+        "frontend/src/v2/CityScene.tsx",
+        "frontend/src/v2/MvpMap.tsx",
+        "frontend/src/v2/useCityBuildings.ts",
+        "backend/v2.py",
+        "docs/handoffs/2026-11-07-home-3d-open-data.md"
+      ]
+    },
+    {
+      "id": "REQ-019",
+      "observed_on": "2026-11-07",
+      "original_date": null,
+      "source_kind": "CURRENT_CHAT",
+      "source_ref": "当前对话",
+      "original_text": "真实建筑轮廓与街区，优先无需密钥",
+      "capture_scope": "完整用户原话；REQ-019为对模型效果的明确选择。",
+      "acceptance": "无行程可打开首页3D；天津/深圳真实街区及当前视野建筑按需加载，无新增密钥；标注OSM/ODbL、时间、有限覆盖及未知高度；失败可重试，规划和二维保留。",
+      "status": "IMPLEMENTED_WITH_EVIDENCE",
+      "related_files": [
+        "frontend/src/v2/CityScene.tsx",
+        "frontend/src/v2/MvpMap.tsx",
+        "frontend/src/v2/useCityBuildings.ts",
+        "backend/v2.py",
+        "docs/handoffs/2026-11-07-home-3d-open-data.md"
+      ]
+    },
+    {
+      "id": "REQ-020",
+      "observed_on": "2026-11-07",
+      "original_date": null,
+      "source_kind": "CURRENT_CHAT",
+      "source_ref": "当前对话",
+      "original_text": "无需检查手机布局",
+      "capture_scope": "完整用户原话；本轮地图任务中途范围纠正。",
+      "acceptance": "本轮仅验证桌面地图与失败恢复，不继续手机布局检查；后续交接注明未验。",
+      "status": "RECORDED",
+      "related_files": [
+        "frontend/tests/home-3d.mjs",
+        "docs/handoffs/2026-11-07-home-3d-open-data.md"
+      ]
+    },
+    {
+      "id": "REQ-021",
+      "observed_on": "2026-11-07",
+      "original_date": null,
+      "source_kind": "CURRENT_CHAT",
+      "source_ref": "当前对话（附起升、越障、下降草图）",
+      "original_text": "需要载入全城市的3d模型，目的是为了能够判断起降高度，构建飞行器路线轨迹，将这些打包成一个agent",
+      "capture_scope": "用户完整原话。草图作为起升、越过障碍、下降的示意。",
+      "acceptance": "首页3D能按视野分块浏览已导入的城市，明确数据范围与缺口。单个Agent读取同一城市数据，给出起终点参考标高和带来源的模拟轨迹，遇不可用数据保守降级。真实飞行用途待确认，沿用模拟边界。",
+      "status": "PARTIAL_WITH_EVIDENCE",
+      "related_files": [
+        "agent/flight_simulation.py",
+        "backend/flight_simulation.py",
+        "frontend/src/v2/FlightSimulation.tsx",
+        "docs/INTERFACES.md",
+        "docs/handoffs/2026-11-07-city-flight-agent.md",
+        "docs/evidence/2026-11-07-city-flight-agent/results.json"
+      ]
+    },
+    {
+      "id": "REQ-022",
+      "observed_on": "2026-11-07",
+      "original_date": null,
+      "source_kind": "CURRENT_CHAT",
+      "source_ref": "当前对话及 DeepSeek 报错截图",
+      "original_text": "校验真实使用是否能够正常运行",
+      "capture_scope": "完整请求。附图仅显示 DeepSeek 暂不可用或分析结果不完整的错误，未显示输入原文。",
+      "acceptance": "Chrome 桌面用公开地点核查真实 DeepSeek、选点、高德路线及地图，并独立核查天津 3D 模拟 Agent。复现异常则定位、处理可恢复情况，记录剩余限制。",
+      "status": "PARTIAL_WITH_EVIDENCE",
+      "related_files": [
+        "backend/v2.py",
+        "tests/backend/test_v2.py",
+        "docs/handoffs/2026-11-07-live-use-recheck.md"
+      ]
+    },
+    {
+      "id": "REQ-023",
+      "observed_on": "2026-11-09",
+      "original_date": null,
+      "source_kind": "CURRENT_CHAT",
+      "source_ref": "当前对话",
+      "original_text": "解决这个问题，至少要求可以正常使用",
+      "capture_scope": "用户完整原话。",
+      "acceptance": "在 DeepSeek 持续故障时，V3 首页仍能手动确认高德起终点并显示真实地面路线，保留文字与既有安全边界。",
+      "status": "IMPLEMENTED_WITH_EVIDENCE",
+      "related_files": [
+        "frontend/src/v2/MvpApp.tsx",
+        "scripts/start-local.ps1",
+        "docs/handoffs/2026-11-09-home-recovery.md"
+      ]
+    },
+    {
+      "id": "REQ-024",
+      "observed_on": "2026-11-09",
+      "original_date": null,
+      "source_kind": "CURRENT_CHAT",
+      "source_ref": "当前对话",
+      "original_text": "现在你给出的入口都无法打开",
+      "capture_scope": "用户完整原话。",
+      "acceptance": "恢复本机前后端并实际核对首页、旧版和代理 API 可访问。提供可重复执行的启动入口。",
+      "status": "IMPLEMENTED_WITH_EVIDENCE",
+      "related_files": [
+        "frontend/src/v2/MvpApp.tsx",
+        "scripts/start-local.ps1",
+        "docs/handoffs/2026-11-09-home-recovery.md"
+      ]
+    },
+    {
+      "id": "REQ-025",
+      "observed_on": "2026-11-09",
+      "original_date": "2026-11-09",
+      "source_kind": "CURRENT_CHAT",
+      "source_ref": "当前对话",
+      "original_text": "将本项目部署到github上，并将网站也上传github，让外部能够打开网站",
+      "capture_scope": "用户完整原话；随后确认 GitHub 源码公开，已有腾讯云账号但尚未创建服务器。",
+      "acceptance": "公开 GitHub 仓库包含经过敏感信息与许可审查的当前项目；外部可访问的网站及其后端和地图代理正常工作，失败时安全降级，不泄露密钥。",
+      "status": "RECORDED",
+      "related_files": [
+        "docs/handoffs/2026-11-09-github-deployment.md"
+      ]
+    },
+    {
+      "id": "REQ-026",
+      "observed_on": "2026-11-09",
+      "original_date": null,
+      "source_kind": "CURRENT_CHAT",
+      "source_ref": "当前对话",
+      "original_text": "检验为什么会出现自然语言输入不可用的情况，给出解决方案",
+      "capture_scope": "完整原话。以公开地点样本和前次真实报错留证诊断。",
+      "acceptance": "区分输入框、DeepSeek、结构校验和高德路线阶段，记录真实请求及故障注入结果，提出可验收的恢复方案。",
+      "status": "RECORDED",
+      "related_files": [
+        "docs/handoffs/2026-11-09-natural-language-diagnosis.md",
+        "docs/evidence/2026-11-09-natural-language/desktop.json",
+        "docs/evidence/2026-11-09-natural-language/upstream.json",
+        "docs/evidence/2026-11-09-natural-language/pending-ui.json"
+      ]
+    }
+  ],
+  "historical_requirement_index": [
+    {
+      "id": "HIST-D-001",
+      "decision_id": "D-001",
+      "title": "项目基线",
+      "source_kind": "REPOSITORY_DECISION_RECORD",
+      "source_ref": "docs/DECISIONS.md",
+      "user_verbatim_available": false,
+      "status_as_recorded": "已采纳（来自用户项目说明，2026-09-26）",
+      "note": "历史产品/技术要求回溯索引，不是用户聊天逐字记录；验收状态以 PROJECT_STATE.md 为准。"
+    },
+    {
+      "id": "HIST-D-002",
+      "decision_id": "D-002",
+      "title": "MVP 数据与运行时角色细化",
+      "source_kind": "REPOSITORY_DECISION_RECORD",
+      "source_ref": "docs/DECISIONS.md",
+      "user_verbatim_available": false,
+      "status_as_recorded": "已采纳（来自产品负责人初始化总指令，2026-09-26）",
+      "note": "历史产品/技术要求回溯索引，不是用户聊天逐字记录；验收状态以 PROJECT_STATE.md 为准。"
+    },
+    {
+      "id": "HIST-D-003",
+      "decision_id": "D-003",
+      "title": "项目 Skill 目录",
+      "source_kind": "REPOSITORY_DECISION_RECORD",
+      "source_ref": "docs/DECISIONS.md",
+      "user_verbatim_available": false,
+      "status_as_recorded": "已采纳（产品负责人 Sprint 1 指令，2026-09-26）",
+      "note": "历史产品/技术要求回溯索引，不是用户聊天逐字记录；验收状态以 PROJECT_STATE.md 为准。"
+    },
+    {
+      "id": "HIST-D-004",
+      "decision_id": "D-004",
+      "title": "Sprint 1 数据工具边界",
+      "source_kind": "REPOSITORY_DECISION_RECORD",
+      "source_ref": "docs/DECISIONS.md",
+      "user_verbatim_available": false,
+      "status_as_recorded": "已采纳（2026-09-27，产品负责人允许先用服务接口贯通最小闭环）",
+      "note": "历史产品/技术要求回溯索引，不是用户聊天逐字记录；验收状态以 PROJECT_STATE.md 为准。"
+    },
+    {
+      "id": "HIST-D-005",
+      "decision_id": "D-005",
+      "title": "Sprint 1 契约收敛",
+      "source_kind": "REPOSITORY_DECISION_RECORD",
+      "source_ref": "docs/DECISIONS.md",
+      "user_verbatim_available": false,
+      "status_as_recorded": "已采纳（2026-09-27，按产品负责人 Sprint 1 明确要求）",
+      "note": "历史产品/技术要求回溯索引，不是用户聊天逐字记录；验收状态以 PROJECT_STATE.md 为准。"
+    },
+    {
+      "id": "HIST-D-006",
+      "decision_id": "D-006",
+      "title": "Sprint 1 技术验收与来源失效处理",
+      "source_kind": "REPOSITORY_DECISION_RECORD",
+      "source_ref": "docs/DECISIONS.md",
+      "user_verbatim_available": false,
+      "status_as_recorded": "已采纳（2026-09-27，依据两城 HTTP 演示、27 项测试及 Reviewer 复审）",
+      "note": "历史产品/技术要求回溯索引，不是用户聊天逐字记录；验收状态以 PROJECT_STATE.md 为准。"
+    },
+    {
+      "id": "HIST-D-007",
+      "decision_id": "D-007",
+      "title": "Sprint 1.5 短会话意图与时间范围契约",
+      "source_kind": "REPOSITORY_DECISION_RECORD",
+      "source_ref": "docs/DECISIONS.md",
+      "user_verbatim_available": false,
+      "status_as_recorded": "已采纳（2026-09-27，依据产品负责人 Sprint 1.5 指令，要求标准化、会话合并、向后兼容接口）。",
+      "note": "历史产品/技术要求回溯索引，不是用户聊天逐字记录；验收状态以 PROJECT_STATE.md 为准。"
+    },
+    {
+      "id": "HIST-D-008",
+      "decision_id": "D-008",
+      "title": "LLM 服务选择与个人出行信息边界",
+      "source_kind": "REPOSITORY_DECISION_RECORD",
+      "source_ref": "docs/DECISIONS.md",
+      "user_verbatim_available": false,
+      "status_as_recorded": "待决（2026-09-27，产品负责人选择本轮先保持本地解析与会话合并，LLM 接入待决）。",
+      "note": "历史产品/技术要求回溯索引，不是用户聊天逐字记录；验收状态以 PROJECT_STATE.md 为准。"
+    },
+    {
+      "id": "HIST-D-010",
+      "decision_id": "D-010",
+      "title": "Sprint 2 可操作 Web App 与基础地图范围",
+      "source_kind": "REPOSITORY_DECISION_RECORD",
+      "source_ref": "docs/DECISIONS.md",
+      "user_verbatim_available": false,
+      "status_as_recorded": "已采纳（2026-09-27，产品负责人 Sprint 2 正式启动指令）。",
+      "note": "历史产品/技术要求回溯索引，不是用户聊天逐字记录；验收状态以 PROJECT_STATE.md 为准。"
+    },
+    {
+      "id": "HIST-D-009",
+      "decision_id": "D-009",
+      "title": "口语验收样例中的陪同冲突状态",
+      "source_kind": "REPOSITORY_DECISION_RECORD",
+      "source_ref": "docs/DECISIONS.md",
+      "user_verbatim_available": false,
+      "status_as_recorded": "已采纳（2026-09-27，产品负责人 P18 明确要求标记“不需要陪同”与“最好有人陪着”的冲突）",
+      "note": "历史产品/技术要求回溯索引，不是用户聊天逐字记录；验收状态以 PROJECT_STATE.md 为准。"
+    },
+    {
+      "id": "HIST-D-011",
+      "decision_id": "D-011",
+      "title": "Sprint 2 真实线路几何与地点简称的证据边界",
+      "source_kind": "REPOSITORY_DECISION_RECORD",
+      "source_ref": "docs/DECISIONS.md",
+      "user_verbatim_available": false,
+      "status_as_recorded": "已采纳（2026-09-27，产品负责人 D-011 补全指令）；下列原提案保留为决策历史，实施以本条新增裁决为准。",
+      "note": "历史产品/技术要求回溯索引，不是用户聊天逐字记录；验收状态以 PROJECT_STATE.md 为准。"
+    },
+    {
+      "id": "HIST-D-012",
+      "decision_id": "D-012",
+      "title": "Sprint 3 三维场景与可选外部资源",
+      "source_kind": "REPOSITORY_DECISION_RECORD",
+      "source_ref": "docs/DECISIONS.md",
+      "user_verbatim_available": false,
+      "status_as_recorded": "已采纳（2026-09-27，产品负责人 Sprint 3 正式执行指令）。",
+      "note": "历史产品/技术要求回溯索引，不是用户聊天逐字记录；验收状态以 PROJECT_STATE.md 为准。"
+    },
+    {
+      "id": "HIST-D-013",
+      "decision_id": "D-013",
+      "title": "高德地图作为城市背景提供方的评估",
+      "source_kind": "REPOSITORY_DECISION_RECORD",
+      "source_ref": "docs/DECISIONS.md",
+      "user_verbatim_available": false,
+      "status_as_recorded": "**待决**（2026-09-27）。用户表示可提供高德 API。曾误将其要求理解为软件内 Key 输入功能；用户随后明确澄清：只希望主地图使用尽可能真实的城市模型，**不在软件中加入连接界面**。该误建页面、测试及截图已删除；高德正式接入仍未获具体产品/许可/接口决策。",
+      "note": "历史产品/技术要求回溯索引，不是用户聊天逐字记录；验收状态以 PROJECT_STATE.md 为准。"
+    },
+    {
+      "id": "HIST-D-014",
+      "decision_id": "D-014",
+      "title": "高德主地图与 Remotion 的本地接入",
+      "source_kind": "REPOSITORY_DECISION_RECORD",
+      "source_ref": "docs/DECISIONS.md",
+      "user_verbatim_available": false,
+      "status_as_recorded": "已采纳本地接入范围（2026-09-27，用户明确要求在当前项目直接执行）；凭证类型经 2026-09-28 控制台截图确认，本地地图与接口验证通过。D-013 的公网发布、商用许可和正式三维城市验收范围未获采纳。",
+      "note": "历史产品/技术要求回溯索引，不是用户聊天逐字记录；验收状态以 PROJECT_STATE.md 为准。"
+    },
+    {
+      "id": "HIST-D-015",
+      "decision_id": "D-015",
+      "title": "Sprint 3 双视角演示与无赛事环境验收",
+      "source_kind": "REPOSITORY_DECISION_RECORD",
+      "source_ref": "docs/DECISIONS.md",
+      "user_verbatim_available": false,
+      "status_as_recorded": "已采纳（2026-09-28，用户要求继续完成 Sprint 3，并明确没有实际比赛环节）。",
+      "note": "历史产品/技术要求回溯索引，不是用户聊天逐字记录；验收状态以 PROJECT_STATE.md 为准。"
+    },
+    {
+      "id": "HIST-D-016",
+      "decision_id": "D-016",
+      "title": "Reality-First 地面证据与二维默认视图",
+      "source_kind": "REPOSITORY_DECISION_RECORD",
+      "source_ref": "docs/DECISIONS.md",
+      "user_verbatim_available": false,
+      "status_as_recorded": "已采纳为 Sprint 3.2 本地实施范围（2026-09-29，产品负责人 Reality-First Implementation 明确授权）；公开部署和真实出行安全推荐仍受 D-013 与独立证据门槛约束。",
+      "note": "历史产品/技术要求回溯索引，不是用户聊天逐字记录；验收状态以 PROJECT_STATE.md 为准。"
+    },
+    {
+      "id": "HIST-D-017",
+      "decision_id": "D-017",
+      "title": "天津任意地点到目的地的地面地图路线",
+      "source_kind": "REPOSITORY_DECISION_RECORD",
+      "source_ref": "docs/DECISIONS.md",
+      "user_verbatim_available": false,
+      "status_as_recorded": "已采纳为本地路线查询范围（2026-09-29，产品负责人明确要求“不必一定要从学校出发，需要做到的是从天津任意地点到任何地点都可以实现路线规划”）。此决定扩展 D-016 的 Golden 范围；不扩展模拟低空、安全推荐或公开部署授权。",
+      "note": "历史产品/技术要求回溯索引，不是用户聊天逐字记录；验收状态以 PROJECT_STATE.md 为准。"
+    },
+    {
+      "id": "HIST-D-018",
+      "decision_id": "D-018",
+      "title": "Git 管理与三版历史目录",
+      "source_kind": "REPOSITORY_DECISION_RECORD",
+      "source_ref": "docs/DECISIONS.md",
+      "user_verbatim_available": false,
+      "status_as_recorded": "已采纳（2026-10-08，用户要求正式使用 Git 管理整个项目，并明确确认 Sprint 1.5 纳入第 1 版、Sprint 3.1/3.2 纳入第 3 版，根目录保留当前开发版）。",
+      "note": "历史产品/技术要求回溯索引，不是用户聊天逐字记录；验收状态以 PROJECT_STATE.md 为准。"
+    }
+  ]
+}

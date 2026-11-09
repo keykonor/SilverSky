@@ -1,0 +1,43 @@
+{
+  "evidenceType": "AUTOMATED_EVIDENCE",
+  "cases": {
+    "R1": {
+      "routeCount": 2,
+      "planCalls": 1,
+      "selectedSafety": "正在查看：模拟低空情景。安全审查：当前不建议采用"
+    },
+    "R2": {
+      "routeCount": 2,
+      "planCalls": 1,
+      "selectedSafety": "正在查看：模拟低空情景。安全审查：当前不建议采用"
+    },
+    "R3": {
+      "routeCount": 2,
+      "planCalls": 1,
+      "selectedSafety": "正在查看：模拟低空情景。安全审查：当前不建议采用"
+    },
+    "R4": {
+      "routeCount": 2,
+      "planCalls": 1,
+      "selectedSafety": "正在查看：模拟低空情景。安全审查：当前不建议采用"
+    },
+    "R5": {
+      "routeCount": 2,
+      "planCalls": 1,
+      "selectedSafety": "正在查看：模拟低空情景。安全审查：当前不建议采用"
+    },
+    "R6": {
+      "emergencyStop": true,
+      "planCalls": 0
+    },
+    "R7": {
+      "followUp": "请继续告诉我\n请告诉我出发时间。 请提供家里的具体出发位置，并说明老人年龄和行动情况。",
+      "planCalls": 0
+    },
+    "R8": {
+      "routeCount": 0,
+      "planCalls": 1,
+      "selectedSafety": null
+    }
+  }
+}

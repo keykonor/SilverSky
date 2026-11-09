@@ -1,0 +1,442 @@
+[
+  {
+    "id": "eh216s",
+    "model": "EH216-S",
+    "company": "亿航智能 EHang",
+    "category": "passenger",
+    "country": "中国",
+    "piloting": "无人驾驶 / 地面监控",
+    "autonomy": "autonomous",
+    "availability": "厂商称已商业化",
+    "statusNote": "官网称已商业化的无人驾驶载人eVTOL；具体地区、运营主体、航线和可乘坐性需另行核实。",
+    "summary": "面向低空观光与短途载人出行的多旋翼无人驾驶航空器。",
+    "metrics": [
+      {
+        "label": "最大航程",
+        "value": "30 km",
+        "note": "厂商产品页公布的航程，实际任务受载荷、风况与储备要求影响。"
+      },
+      {
+        "label": "最大设计速度",
+        "value": "130 km/h",
+        "note": "设计最大值，不等于全程巡航速度。"
+      },
+      {
+        "label": "最大起飞重量",
+        "value": "620 kg",
+        "note": "含航空器、能源与载荷的总重，不是乘客可用载重。"
+      }
+    ],
+    "sourceUrl": "https://www.ehang.com/ehang216s/",
+    "extraSources": [],
+    "checkedAt": "2026-11-06",
+    "dataStatus": "PUBLIC_DATA",
+    "image": "/aircraft-images/eh216s.jpg",
+    "imageSource": "https://www.ehang.com/images/teh216s.jpg",
+    "imageCredit": "图片 © 亿航智能 EHang，来源于厂商官网"
+  },
+  {
+    "id": "vt35",
+    "model": "VT35",
+    "company": "亿航智能 EHang",
+    "category": "passenger",
+    "country": "中国",
+    "piloting": "无人驾驶 / 地面监控",
+    "autonomy": "autonomous",
+    "availability": "已发布",
+    "statusNote": "2025年10月官方发布；发布与公布价格不代表已经取得全部运营许可。",
+    "summary": "复合翼长航程无人驾驶载人航空器，面向城际、跨海和跨山应用。",
+    "metrics": [
+      {
+        "label": "满载航程",
+        "value": "≥200 km",
+        "note": "官网公布的满载设计指标，实际交付与任务限制以厂商为准。"
+      },
+      {
+        "label": "经济巡航速度",
+        "value": "≥216 km/h",
+        "note": "经济巡航指标，不表示任何天气下均可达到。"
+      },
+      {
+        "label": "有效载荷",
+        "value": "≥200 kg",
+        "note": "厂商公布指标；乘员、行李与任务约束需整体核算。"
+      }
+    ],
+    "sourceUrl": "https://www.ehang.com/vt35/",
+    "extraSources": [
+      "https://www.ehang.com/news/1291.html"
+    ],
+    "checkedAt": "2026-11-06",
+    "dataStatus": "PUBLIC_DATA",
+    "image": "/aircraft-images/vt35.jpg",
+    "imageSource": "https://www.ehang.com/images/tvt35.jpg",
+    "imageCredit": "图片 © 亿航智能 EHang，来源于厂商官网"
+  },
+  {
+    "id": "fc100",
+    "model": "DJI FlyCart 100",
+    "company": "大疆创新 DJI",
+    "category": "cargo",
+    "country": "中国",
+    "piloting": "无人驾驶 / 地面监控",
+    "autonomy": "autonomous",
+    "availability": "已发布",
+    "statusNote": "官网已发布的物流无人机；2025发布稿和当前页载重口径不同，本条以当前产品页为准，并保留航程工况。",
+    "summary": "重载运输多旋翼无人机，支持吊运与空吊系统。",
+    "metrics": [
+      {
+        "label": "双电池载重",
+        "value": "85 kg",
+        "note": "当前官网首页公布的双电池载重；配套系统、区域与固件条件需查原文。"
+      },
+      {
+        "label": "工况航程",
+        "value": "12 km",
+        "note": "参数页以149.9kg起飞重量、海平面25°C无风试验测得；不是85kg载荷下的保证航程。"
+      },
+      {
+        "label": "防护等级",
+        "value": "IP55",
+        "note": "厂商标称，不能据此推定任何降雨条件下都可作业。"
+      }
+    ],
+    "sourceUrl": "https://www.dji.com/flycart-100",
+    "extraSources": [
+      "https://www.dji.com/flycart-100/specs"
+    ],
+    "checkedAt": "2026-11-06",
+    "dataStatus": "PUBLIC_DATA",
+    "image": "/aircraft-images/fc100.png",
+    "imageSource": "https://www-cdn.djiits.com/cms/uploads/ca4874861c76a3bffac78bb7b2af56fc@374*374.png",
+    "imageCredit": "图片 © 大疆创新 DJI，来源于厂商官网"
+  },
+  {
+    "id": "v2000cg",
+    "model": "V2000CG 凯瑞鸥",
+    "company": "峰飞航空 AutoFlight",
+    "category": "cargo",
+    "country": "中国",
+    "piloting": "无人驾驶 / 地面监控",
+    "autonomy": "autonomous",
+    "availability": "官方展示",
+    "statusNote": "官网称已完成民航适航认证；这不代表任意任务、航线或运营主体均获批准。",
+    "summary": "吨级无人驾驶货运eVTOL，面向区域物流与跨水域运输。",
+    "metrics": [
+      {
+        "label": "最大载荷",
+        "value": "400 kg",
+        "note": "官网标准配置，不能由最大起飞重量代替。"
+      },
+      {
+        "label": "运行航程",
+        "value": "200 km",
+        "note": "厂商公开配置指标，原文未在此条给出同时满载的全部工况。"
+      },
+      {
+        "label": "货舱容积",
+        "value": "3.2 m³",
+        "note": "标准配置货舱容积，装载还受形状、重心与固定方式限制。"
+      }
+    ],
+    "sourceUrl": "https://www.autoflight.com/en/v2000cg/",
+    "extraSources": [],
+    "checkedAt": "2026-11-06",
+    "dataStatus": "PUBLIC_DATA",
+    "image": "/aircraft-images/v2000cg.jpg",
+    "imageSource": "https://www.autoflight.com/assets/uploads/crops/standard.f203ed1a.44.jpg",
+    "imageCredit": "图片 © 峰飞航空 AutoFlight，来源于厂商官网"
+  },
+  {
+    "id": "fc30",
+    "model": "DJI FlyCart 30",
+    "company": "大疆创新 DJI",
+    "category": "cargo",
+    "country": "中国",
+    "piloting": "无人驾驶 / 地面监控",
+    "autonomy": "autonomous",
+    "availability": "已发布",
+    "statusNote": "厂商公开展示的产品；本索引未核实实时供货与运营许可。",
+    "summary": "支持货箱与绞盘运输的多旋翼物流无人机。",
+    "metrics": [
+      {
+        "label": "双电池载重",
+        "value": "30 kg",
+        "note": "双电池模式；单电池40kg为不同配置，不与本条航程混用。"
+      },
+      {
+        "label": "满载航程",
+        "value": "16 km",
+        "note": "30kg、双电池、海平面无风，以15m/s匀速飞行试验测得。"
+      },
+      {
+        "label": "最大水平速度",
+        "value": "20 m/s",
+        "note": "海平面、无风、30kg载荷的受控试验数据。"
+      }
+    ],
+    "sourceUrl": "https://www.dji.com/flycart-30",
+    "extraSources": [
+      "https://www.dji.com/flycart-30/specs"
+    ],
+    "checkedAt": "2026-11-06",
+    "dataStatus": "PUBLIC_DATA",
+    "image": "/aircraft-images/fc30.png",
+    "imageSource": "https://www-cdn.djiits.com/cms/uploads/ff7d624d0b2d70d468c05343b22d9a4e@374*374.png",
+    "imageCredit": "图片 © 大疆创新 DJI，来源于厂商官网"
+  },
+  {
+    "id": "eh216l",
+    "model": "EH216-L",
+    "company": "亿航智能 EHang",
+    "category": "cargo",
+    "country": "中国",
+    "piloting": "无人驾驶 / 地面监控",
+    "autonomy": "autonomous",
+    "availability": "官方展示",
+    "statusNote": "厂商公开展示的产品；本索引未核实实时供货与运营许可。",
+    "summary": "EH216系列物流机型，支持按预设航线自主执行运输任务。",
+    "metrics": [
+      {
+        "label": "最大载荷",
+        "value": "250 kg",
+        "note": "官网最大载荷，任务还需满足重心与环境限制。"
+      },
+      {
+        "label": "最大航程",
+        "value": "35 km",
+        "note": "官网最大航程，未说明可与250kg最大载荷同时达到。"
+      },
+      {
+        "label": "满载最大航时",
+        "value": "21 min",
+        "note": "官网公布的满载最大航时，不用于推算未公开航程。"
+      }
+    ],
+    "sourceUrl": "https://www.ehang.com/cn/ehang216l/",
+    "extraSources": [],
+    "checkedAt": "2026-11-06",
+    "dataStatus": "PUBLIC_DATA",
+    "image": "/aircraft-images/eh216l.jpg",
+    "imageSource": "https://www.ehang.com/images/teh216l.jpg",
+    "imageCredit": "图片 © 亿航智能 EHang，来源于厂商官网"
+  },
+  {
+    "id": "v2000em",
+    "model": "V2000EM 盛世龙",
+    "company": "峰飞航空 AutoFlight",
+    "category": "passenger",
+    "country": "中国",
+    "piloting": "有人驾驶 eVTOL",
+    "autonomy": "piloted",
+    "availability": "官方展示",
+    "statusNote": "作为相关载人eVTOL补充收录，需机上驾驶员；本索引不将其归为无人驾驶。",
+    "summary": "面向城市及区域客运的纯电复合翼航空器，当前官方标准配置为六座。",
+    "metrics": [
+      {
+        "label": "座位配置",
+        "value": "1+5 座",
+        "note": "1名驾驶员加5名乘客，属于有人驾驶eVTOL，不是无人驾驶客运机。"
+      },
+      {
+        "label": "运行航程",
+        "value": "200 km",
+        "note": "当前官网标准配置，旧版本宣传参数可能不同。"
+      },
+      {
+        "label": "最大起飞重量",
+        "value": "2,400 kg",
+        "note": "含机体、能源与载荷总重，不是有效载荷。"
+      }
+    ],
+    "sourceUrl": "https://www.autoflight.com/en/v2000em/",
+    "extraSources": [],
+    "checkedAt": "2026-11-06",
+    "dataStatus": "PUBLIC_DATA",
+    "image": "/aircraft-images/v2000em.png",
+    "imageSource": "https://www.autoflight.com/assets/uploads/crops/standard.9714dd84.111.png",
+    "imageCredit": "图片 © 峰飞航空 AutoFlight，来源于厂商官网"
+  },
+  {
+    "id": "ve25",
+    "model": "VE25-100 天行",
+    "company": "沃兰特航空 VOLANT",
+    "category": "passenger",
+    "country": "中国",
+    "piloting": "有人驾驶 eVTOL",
+    "autonomy": "piloted",
+    "availability": "研制 / 试飞",
+    "statusNote": "官网进度记录到2026年5月有人驾驶转换飞行；规格为设计参考，未将其写成现货或已获运营许可。",
+    "summary": "复合翼载人eVTOL，官网已公布有人驾驶转换飞行进展。",
+    "metrics": [
+      {
+        "label": "座位数",
+        "value": "6 座",
+        "note": "最高6名驾乘人员，包含驾驶员，不是6名乘客。"
+      },
+      {
+        "label": "设计航程",
+        "value": "200–400 km",
+        "note": "厂商特定设计版本的参考范围，最终以实际交付为准。"
+      },
+      {
+        "label": "巡航速度",
+        "value": "235 km/h",
+        "note": "官网设计参考值；不是已核验的实际运营保证。"
+      }
+    ],
+    "sourceUrl": "https://www.volantaerotech.com/product.html",
+    "extraSources": [],
+    "checkedAt": "2026-11-06",
+    "dataStatus": "PUBLIC_DATA",
+    "image": "/aircraft-images/ve25.png",
+    "imageSource": "https://www.volantaerotech.com/static/home/images/pro_bar4_img2.png",
+    "imageCredit": "图片 © 沃兰特航空 VOLANT，来源于厂商官网"
+  },
+  {
+    "id": "ae200",
+    "model": "AE200",
+    "company": "沃飞长空 AEROFUGIA",
+    "category": "passenger",
+    "country": "中国",
+    "piloting": "有人驾驶 eVTOL",
+    "autonomy": "piloted",
+    "availability": "研制 / 验证",
+    "statusNote": "官网展示验证试飞与适航测试进展；本条不推断已完成取证或已经商业载客。",
+    "summary": "倾转动力载人eVTOL，面向区域空中出行。",
+    "metrics": [
+      {
+        "label": "标准座位配置",
+        "value": "1+5 座",
+        "note": "官网为1名驾驶员与5名乘客，另支持灵活布局。"
+      },
+      {
+        "label": "最大航程",
+        "value": "200 km",
+        "note": "厂商注明为实验工况测试结果，不代表实际运营保证。"
+      },
+      {
+        "label": "巡航速度",
+        "value": "230 km/h",
+        "note": "厂商实验工况参数；具体交付版本另行确认。"
+      }
+    ],
+    "sourceUrl": "https://m.aerofugia.com/",
+    "extraSources": [],
+    "checkedAt": "2026-11-06",
+    "dataStatus": "PUBLIC_DATA",
+    "image": "/aircraft-images/ae200.png",
+    "imageSource": "https://m.aerofugia.com/img/pro1.png",
+    "imageCredit": "图片 © 沃飞长空 AEROFUGIA，来源于厂商官网"
+  },
+  {
+    "id": "wisk6",
+    "model": "Generation 6",
+    "company": "Wisk Aero",
+    "category": "passenger",
+    "country": "美国",
+    "piloting": "无人驾驶 / 地面监控",
+    "autonomy": "autonomous",
+    "availability": "认证候选机型",
+    "statusNote": "当前官网称为FAA型号认证候选机型，不表示认证已完成或已可订票。",
+    "summary": "四乘客、自主飞行的全电动空中出租车，机舱不设驾驶员座位。",
+    "metrics": [
+      {
+        "label": "乘客容量",
+        "value": "4 人",
+        "note": "官网称可携带随身行李，不含机上驾驶员。"
+      },
+      {
+        "label": "设计航程",
+        "value": "90 mi",
+        "note": "约145km，官网注明包含储备；不是航线许可或可售行程。"
+      },
+      {
+        "label": "巡航速度",
+        "value": "约120 kn",
+        "note": "约222km/h，仅为厂商设计指标。"
+      }
+    ],
+    "sourceUrl": "https://wisk.aero/aircraft",
+    "extraSources": [],
+    "checkedAt": "2026-11-06",
+    "dataStatus": "PUBLIC_DATA",
+    "image": "/aircraft-images/wisk6.jpg",
+    "imageSource": "https://framerusercontent.com/images/5KBWm5Np5yQbZkNHRSYSF6amWR8.jpg",
+    "imageCredit": "图片 © Wisk Aero，来源于厂商官网"
+  },
+  {
+    "id": "wingcopter198",
+    "model": "Wingcopter 198",
+    "company": "Wingcopter GmbH",
+    "category": "cargo",
+    "country": "德国",
+    "piloting": "无人驾驶 / 地面监控",
+    "autonomy": "autonomous",
+    "availability": "官方展示",
+    "statusNote": "厂商公开展示的产品；本索引未核实实时供货与运营许可。",
+    "summary": "采用倾转旋翼的复合翼无人机，覆盖物流配送与测绘任务。",
+    "metrics": [
+      {
+        "label": "有效载荷",
+        "value": "4.7 kg",
+        "note": "当前厂商页指标，不与旧版本5–6kg宣传混用。"
+      },
+      {
+        "label": "最大航程",
+        "value": "94 km",
+        "note": "官网未在此条说明对应载荷，不推定4.7kg可同时飞行94km。"
+      },
+      {
+        "label": "飞行速度",
+        "value": "90 km/h",
+        "note": "厂商页公布速度，具体任务与地区约束以正式资料为准。"
+      }
+    ],
+    "sourceUrl": "https://wsd.wingcopter.com/wingcopter-198",
+    "extraSources": [],
+    "checkedAt": "2026-11-06",
+    "dataStatus": "PUBLIC_DATA",
+    "image": "/aircraft-images/wingcopter198.png",
+    "imageSource": "https://wsd.wingcopter.com/wp-content/uploads/2025/02/2_delivery_slide.png",
+    "imageCredit": "图片 © Wingcopter GmbH，来源于厂商官网"
+  },
+  {
+    "id": "nuuva",
+    "model": "Nuuva V300",
+    "company": "Pipistrel",
+    "category": "cargo",
+    "country": "斯洛文尼亚",
+    "piloting": "无人驾驶 / 地面监控",
+    "autonomy": "autonomous",
+    "availability": "研制 / 试飞",
+    "statusNote": "采用2025年初步手册，数据可能调整；未核实当前量产交付状态。",
+    "summary": "混合动力垂直起降货运无人机，2025年已公开首次悬停飞行。",
+    "metrics": [
+      {
+        "label": "初步最大载荷",
+        "value": "408 kg",
+        "note": "2025版手册900lb换算；初步数据，可能随设计改变。"
+      },
+      {
+        "label": "典型任务航程",
+        "value": "556 km",
+        "note": "300海里换算，对应600lb（约272kg）典型载荷，不是408kg最大载荷。"
+      },
+      {
+        "label": "最大巡航速度",
+        "value": "220 km/h",
+        "note": "2025版初步技术参数，并非实际交付或任务保证。"
+      }
+    ],
+    "sourceUrl": "https://www.pipistrel-aircraft.com/wp-content/uploads/2025/06/2025_Nuuva_Brochure_Digital.pdf",
+    "extraSources": [
+      "https://media.pipistrel-aircraft.com/269002-nuuva-v300-takes-off-with-successful-first-flight/"
+    ],
+    "checkedAt": "2026-11-06",
+    "dataStatus": "PUBLIC_DATA",
+    "image": "/aircraft-images/nuuva.webp",
+    "imageSource": "https://d21buns5ku92am.cloudfront.net/70337/images/693016-656025-nuuva-first-flight-release-d2096e-original-1771502962-d20bad-large_webp-1785966049.webp",
+    "imageCredit": "图片 © Pipistrel，来源于厂商官网"
+  }
+]

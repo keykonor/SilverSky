@@ -1,0 +1,36 @@
+[
+  {
+    "rate": 4,
+    "city": "天津",
+    "environment": "Chrome DevTools CPU emulation, headless",
+    "pageErrors": 0,
+    "timingsMs": {
+      "firstReady": 2601,
+      "inputResponse": 83,
+      "planResult": 3291,
+      "routeSwitch": 2282,
+      "camera": 1261,
+      "cityViewSwitch": 1070
+    },
+    "issue": null,
+    "cityViewState": "地图视角\n真实城市地图\n立体旅程示意\n正在查看：模拟低空情景。安全审查：当前不建议采用",
+    "heapBytes": 95772505
+  },
+  {
+    "rate": 6,
+    "city": "深圳",
+    "environment": "Chrome DevTools CPU emulation, headless",
+    "pageErrors": 0,
+    "timingsMs": {
+      "firstReady": 2909,
+      "inputResponse": 89,
+      "planResult": 4643,
+      "routeSwitch": 3014,
+      "camera": 1757,
+      "cityViewSwitch": 1464
+    },
+    "issue": null,
+    "cityViewState": "地图视角\n真实城市地图\n立体旅程示意\n正在查看：模拟低空情景。安全审查：当前不建议采用",
+    "heapBytes": 83473281
+  }
+]

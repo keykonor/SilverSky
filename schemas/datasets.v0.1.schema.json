@@ -1,0 +1,132 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "SilverSky Sprint 1 local datasets",
+  "oneOf": [
+    { "$ref": "#/$defs/PublicPois" },
+    { "$ref": "#/$defs/GroundRoutes" },
+    { "$ref": "#/$defs/SimulatedAirScenarios" },
+    { "$ref": "#/$defs/AliasRegistry" }
+  ],
+  "$defs": {
+    "Coordinate": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["longitude", "latitude"],
+      "properties": {
+        "longitude": { "type": "number", "minimum": -180, "maximum": 180 },
+        "latitude": { "type": "number", "minimum": -90, "maximum": 90 }
+      }
+    },
+    "LineString": {
+      "type": "object", "additionalProperties": false, "required": ["type", "coordinates"],
+      "properties": { "type": { "const": "LineString" }, "coordinates": { "type": "array", "minItems": 2, "items": { "type": "array", "prefixItems": [{ "type": "number", "minimum": -180, "maximum": 180 }, { "type": "number", "minimum": -90, "maximum": 90 }], "minItems": 2, "maxItems": 2 } } }
+    },
+    "AliasRegistry": {
+      "type": "object", "additionalProperties": false, "required": ["kind", "data_status", "fetched_at", "aliases"],
+      "properties": { "kind": { "const": "GOLDEN_ALIAS_REGISTRY" }, "data_status": { "const": "PUBLIC_DATA" }, "fetched_at": { "type": "string", "format": "date-time" }, "aliases": { "type": "array", "items": { "$ref": "#/$defs/Alias" } } }
+    },
+    "Alias": {
+      "type": "object", "additionalProperties": false, "required": ["alias", "canonical_id", "canonical_name", "city", "scenario_id", "data_status", "source_ref", "precision"],
+      "properties": { "alias": { "type": "string", "minLength": 1 }, "canonical_id": { "type": "string", "minLength": 1 }, "canonical_name": { "type": "string", "minLength": 1 }, "city": { "enum": ["TIANJIN", "SHENZHEN"] }, "scenario_id": { "type": "string", "minLength": 1 }, "data_status": { "const": "PUBLIC_DATA" }, "source_ref": { "type": "string", "format": "uri" }, "precision": { "const": "POI" } }
+    },
+    "PublicPois": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["kind", "scenario_id", "city", "data_status", "fetched_at", "attribution", "license_url", "pois"],
+      "properties": {
+        "kind": { "const": "PUBLIC_POIS" },
+        "scenario_id": { "type": "string", "minLength": 1 },
+        "city": { "enum": ["TIANJIN", "SHENZHEN"] },
+        "data_status": { "const": "PUBLIC_DATA" },
+        "fetched_at": { "type": "string", "format": "date-time" },
+        "attribution": { "const": "© OpenStreetMap contributors" },
+        "license_url": { "const": "https://www.openstreetmap.org/copyright" },
+        "pois": { "type": "array", "minItems": 2, "items": { "$ref": "#/$defs/Poi" } }
+      }
+    },
+    "Poi": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["poi_id", "name", "address", "official_source_url", "coordinate", "coordinate_kind", "osm_ref", "coordinate_source_url", "data_status"],
+      "properties": {
+        "poi_id": { "type": "string", "minLength": 1 },
+        "name": { "type": "string", "minLength": 1 },
+        "address": { "type": "string", "minLength": 1 },
+        "official_source_url": { "type": "string", "format": "uri" },
+        "coordinate": { "$ref": "#/$defs/Coordinate" },
+        "coordinate_kind": { "const": "OSM_OBJECT_CENTROID_NOT_ENTRANCE" },
+        "osm_ref": { "type": "string", "pattern": "^(node|way|relation)/[0-9]+$" },
+        "coordinate_source_url": { "type": "string", "format": "uri" },
+        "source_ref": { "type": "string", "format": "uri" },
+        "observed_at": { "type": "string", "format": "date-time" },
+        "data_status": { "const": "PUBLIC_DATA" }
+      }
+    },
+    "GroundRoutes": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["kind", "data_status", "fetched_at", "attribution", "license_url", "routes"],
+      "properties": {
+        "kind": { "const": "GROUND_ROUTE_SNAPSHOTS" },
+        "data_status": { "const": "PUBLIC_DATA" },
+        "fetched_at": { "type": "string", "format": "date-time" },
+        "attribution": { "const": "© OpenStreetMap contributors; route estimate by OSRM" },
+        "license_url": { "const": "https://www.openstreetmap.org/copyright" },
+        "routes": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/GroundRoute" } }
+      }
+    },
+    "GroundRoute": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["scenario_id", "origin_poi_id", "destination_poi_id", "profile", "distance_m", "duration_min", "snap_distance_m", "source_url", "data_status", "limitations"],
+      "allOf": [{ "if": { "anyOf": [{ "required": ["geometry"] }, { "required": ["geometry_captured_at"] }] }, "then": { "required": ["geometry", "geometry_captured_at"] } }],
+      "properties": {
+        "scenario_id": { "type": "string", "minLength": 1 },
+        "origin_poi_id": { "type": "string", "minLength": 1 },
+        "destination_poi_id": { "type": "string", "minLength": 1 },
+        "profile": { "const": "driving" },
+        "distance_m": { "type": "number", "minimum": 0 },
+        "duration_min": { "type": "number", "minimum": 0 },
+        "snap_distance_m": { "type": "array", "prefixItems": [{ "type": "number", "minimum": 0 }, { "type": "number", "minimum": 0 }], "minItems": 2, "maxItems": 2 },
+        "source_url": { "type": "string", "format": "uri" },
+        "geometry": { "$ref": "#/$defs/LineString" },
+        "geometry_captured_at": { "type": "string", "format": "date-time" },
+        "data_status": { "const": "PUBLIC_DATA" },
+        "limitations": { "type": "string", "minLength": 1 }
+      }
+    },
+    "SimulatedAirScenarios": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["kind", "data_status", "generated_at", "scenarios"],
+      "properties": {
+        "kind": { "const": "SIMULATED_AIR_SCENARIOS" },
+        "data_status": { "const": "SIMULATED_DATA" },
+        "generated_at": { "type": "string", "format": "date-time" },
+        "scenarios": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/AirScenario" } }
+      }
+    },
+    "AirScenario": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["scenario_id", "city", "data_status", "vertiport_a", "vertiport_b", "air_duration_min", "weather", "operational_status", "price_status", "disclaimer"],
+      "properties": {
+        "scenario_id": { "type": "string", "minLength": 1 },
+        "city": { "enum": ["TIANJIN", "SHENZHEN"] },
+        "data_status": { "const": "SIMULATED_DATA" },
+        "vertiport_a": { "type": "string", "minLength": 1 },
+        "vertiport_b": { "type": "string", "minLength": 1 },
+        "simulated_vertiports": { "type": "array", "minItems": 2, "maxItems": 2, "items": { "$ref": "#/$defs/SimulatedVertiport" } },
+        "air_duration_min": { "type": "number", "exclusiveMinimum": 0 },
+        "weather": { "type": "string", "enum": ["CLEAR_SCENARIO", "ADVERSE_SCENARIO", "UNKNOWN_SCENARIO"] },
+        "operational_status": { "const": "NOT_REAL_OPERATION" },
+        "price_status": { "const": "DATA_UNAVAILABLE" },
+        "disclaimer": { "type": "string", "minLength": 1 }
+      }
+    },
+    "SimulatedVertiport": {
+      "type": "object", "additionalProperties": false, "required": ["id", "name", "city", "scenario_purpose", "coordinate", "coordinate_is_synthetic", "data_status"],
+      "properties": { "id": { "type": "string", "minLength": 1 }, "name": { "type": "string", "minLength": 1 }, "city": { "enum": ["TIANJIN", "SHENZHEN"] }, "scenario_purpose": { "type": "string", "minLength": 1 }, "coordinate": { "$ref": "#/$defs/Coordinate" }, "coordinate_is_synthetic": { "const": true }, "data_status": { "const": "SIMULATED_DATA" } }
+    }
+  }
+}

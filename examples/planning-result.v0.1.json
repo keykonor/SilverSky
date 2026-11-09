@@ -1,0 +1,120 @@
+{
+  "schema_version": "0.1-proposal",
+  "user_request": {
+    "origin": { "label": "示例起点（非真实地址）" },
+    "destination": { "label": "示例终点（非真实地址）" },
+    "departure_time": "2026-09-27T15:00:00+08:00",
+    "urgency": "NORMAL",
+    "elderly_profile": {
+      "age": 78,
+      "mobility": "LIMITED",
+      "walking_tolerance_m": 300,
+      "wheelchair_requirement": null,
+      "assistance_requirement": true,
+      "preferences": ["减少步行与换乘"]
+    },
+    "preferences": {
+      "focus": "SAFETY_COMFORT",
+      "air_option": "ALLOW_SIMULATION",
+      "max_cost_cny": null,
+      "max_transfers": 1
+    }
+  },
+  "needs_summary": "契约样例：行动不便，需要减少步行；没有真实路线数据。",
+  "route_options": [
+    {
+      "route_id": "fixture-ground-unknown",
+      "route_type": "GROUND_ONLY",
+      "display_labels": ["UNRANKED"],
+      "total_time_min": null,
+      "walking_distance_m": null,
+      "transfer_count": null,
+      "estimated_cost_cny": null,
+      "risk_level": "UNKNOWN",
+      "comfort_score": null,
+      "data_status": "DATA_UNAVAILABLE",
+      "segments": [
+        {
+          "segment_type": "CAR",
+          "origin": { "label": "示例起点" },
+          "destination": { "label": "示例终点" },
+          "distance_m": null,
+          "duration_min": null,
+          "evidence": {
+            "data_status": "DATA_UNAVAILABLE",
+            "unavailable_reason": "契约样例没有接入真实地面数据"
+          }
+        }
+      ],
+      "risk_assessment": {
+        "weather": "UNKNOWN",
+        "mobility": "UNKNOWN",
+        "transfer": "UNKNOWN",
+        "operational": "UNKNOWN",
+        "data_uncertainty": "HIGH",
+        "review_outcome": "UNKNOWN",
+        "reasons": ["缺少真实地面数据，无法判断可行性"]
+      },
+      "explanation": "这是字段样例，不能用于实际出行。"
+    },
+    {
+      "route_id": "fixture-air-scenario",
+      "route_type": "GROUND_AIR_GROUND",
+      "display_labels": ["SIMULATED_SCENARIO"],
+      "total_time_min": null,
+      "walking_distance_m": null,
+      "transfer_count": null,
+      "estimated_cost_cny": null,
+      "risk_level": "UNKNOWN",
+      "comfort_score": null,
+      "data_status": "DATA_UNAVAILABLE",
+      "segments": [
+        {
+          "segment_type": "CAR",
+          "origin": { "label": "示例起点" },
+          "destination": { "label": "模拟起降点 A" },
+          "distance_m": null,
+          "duration_min": null,
+          "evidence": {
+            "data_status": "DATA_UNAVAILABLE",
+            "unavailable_reason": "接驳路段没有真实数据"
+          }
+        },
+        {
+          "segment_type": "AIR",
+          "origin": { "label": "模拟起降点 A" },
+          "destination": { "label": "模拟起降点 B" },
+          "distance_m": null,
+          "duration_min": null,
+          "evidence": {
+            "data_status": "SIMULATED_DATA",
+            "source_ref": "fixture:low-altitude-scenario",
+            "observed_at": "2026-09-26T00:00:00+08:00"
+          }
+        },
+        {
+          "segment_type": "CAR",
+          "origin": { "label": "模拟起降点 B" },
+          "destination": { "label": "示例终点" },
+          "distance_m": null,
+          "duration_min": null,
+          "evidence": {
+            "data_status": "DATA_UNAVAILABLE",
+            "unavailable_reason": "接驳路段没有真实数据"
+          }
+        }
+      ],
+      "risk_assessment": {
+        "weather": "UNKNOWN",
+        "mobility": "UNKNOWN",
+        "transfer": "UNKNOWN",
+        "operational": "UNKNOWN",
+        "data_uncertainty": "HIGH",
+        "review_outcome": "UNKNOWN",
+        "reasons": ["模拟低空段仅用于展示，运营条件未知"]
+      },
+      "explanation": "模拟情景演示；无法据此判断真实航班、起降点或可飞条件。"
+    }
+  ],
+  "warnings": ["纯契约样例，不可用于真实出行或预订。"]
+}

@@ -1,0 +1,9 @@
+vertiport_id,city,name,latitude,longitude,candidate_type,nearby_hospital,nearby_eldercare_facility,nearby_transport_hub,ground_accessibility,estimated_service_radius_km,source_name,source_url,data_status,notes
+VP-TJ-001,天津,天津滨海国际机场,39.1244,117.3462,EXISTING_PUBLIC_INFO,NO,NO,YES(机场/高铁/地铁枢纽),地铁2号线直达、地面交通完善,8,公开地图/机场官网,https://www.tbia.cn,PUBLIC_DATA,坐标为近似值;机场为真实既有大型交通枢纽、非专用低空起降点、作为地面枢纽参考;坐标需GIS校核
+VP-TJ-002,天津,天津医科大学总医院(楼顶/周边),39.0930,117.1820,POTENTIAL_SITE,YES(天津医科大学总医院),NO,YES(地铁鞍山道站),医院周边道路狭窄、需无障碍坡道与垂直电梯接驳,3,公开地图/医院官网,https://www.tjmugh.com.cn,PUBLIC_DATA,坐标为近似值;地点真实存在、作为起降点仅为候选假设、未经任何运营确认;坐标需GIS校核
+VP-TJ-003,天津,天津之眼·海河文化广场,39.1530,117.1820,POTENTIAL_SITE,NO,NO,YES(地铁/景区),景区周边、节假日人流密集,2,公开地图,,PUBLIC_DATA,坐标为近似值;地点真实、作为观光类起降候选假设;坐标需GIS校核
+VP-TJ-004,天津,示范社区养老服务中心(模拟),39.0900,117.2200,SIMULATED_SITE,NO,YES(模拟养老机构),NO,模拟;地面可达性为假设值,3,SilverSky 模拟数据,,SIMULATED_DATA,完全模拟点位、非真实设施;仅用于Demo/Agent测试、不得对外表述为已运营低空起降设施
+VP-SZ-001,深圳,深圳宝安国际机场,22.6393,113.8108,EXISTING_PUBLIC_INFO,NO,NO,YES(机场/地铁11号线/高铁),地铁与城市交通完善,8,公开地图/机场官网,https://www.szairport.com,PUBLIC_DATA,坐标为近似值;真实大型交通枢纽、作为地面枢纽参考;坐标需GIS校核
+VP-SZ-002,深圳,蛇口邮轮母港,22.4790,113.9090,EXISTING_PUBLIC_INFO,NO,NO,YES(邮轮母港/地铁蛇口港站),地铁可达,5,公开地图/新华社(峰飞演示报道),https://www.china.org.cn,PUBLIC_DATA,坐标为近似值;2024年2月峰飞盛世龙曾在此起飞完成深珠跨海演示、有公开起降记录(演示性质、非常态化运营)
+VP-SZ-003,深圳,深圳市人民医院(罗湖·楼顶/周边),22.5440,114.1190,POTENTIAL_SITE,YES(深圳市人民医院),NO,YES(地铁),医院周边、需无障碍接驳,3,公开地图/医院官网,https://www.szrmyy.com,PUBLIC_DATA,坐标为近似值;地点真实、起降候选为假设、未经任何运营确认;坐标需GIS校核
+VP-SZ-004,深圳,龙岗区示范社区(模拟),22.7100,114.2300,SIMULATED_SITE,NO,YES(模拟养老机构),NO,模拟;地面可达性为假设值,3,SilverSky 模拟数据,,SIMULATED_DATA,完全模拟点位、非真实设施;仅用于Demo/Agent测试、不得对外表述为已运营低空起降设施

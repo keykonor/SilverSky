@@ -1,0 +1,20 @@
+{
+  "origin": { "label": "示例起点（非真实地址）" },
+  "destination": { "label": "示例终点（非真实地址）" },
+  "departure_time": "2026-09-27T15:00:00+08:00",
+  "urgency": "NORMAL",
+  "elderly_profile": {
+    "age": 78,
+    "mobility": "LIMITED",
+    "walking_tolerance_m": 300,
+    "wheelchair_requirement": null,
+    "assistance_requirement": true,
+    "preferences": ["减少步行与换乘"]
+  },
+  "preferences": {
+    "focus": "SAFETY_COMFORT",
+    "air_option": "ALLOW_SIMULATION",
+    "max_cost_cny": null,
+    "max_transfers": 1
+  }
+}

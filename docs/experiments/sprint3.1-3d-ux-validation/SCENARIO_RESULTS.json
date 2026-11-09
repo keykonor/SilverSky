@@ -1,0 +1,264 @@
+{
+  "referenceTime": "2026-09-29T09:00:00+08:00",
+  "evidenceType": "AUTOMATED_EVIDENCE",
+  "cases": {
+    "R1": {
+      "input": "78岁老人行动不便，需要陪同，从天津大学卫津路校区到天津医科大学总医院，2026年9月30日下午15:00出发，普通出行，安全舒适优先。",
+      "planningAllowed": true,
+      "missingFields": [],
+      "uncertainFields": [],
+      "followUp": null,
+      "mobility": "LIMITED",
+      "wheelchairRequirement": null,
+      "focus": "SAFETY_COMFORT",
+      "urgency": "NORMAL",
+      "routes": [
+        {
+          "type": "GROUND_ONLY",
+          "review": "DOWNGRADE",
+          "dataStatus": "PUBLIC_DATA",
+          "reasons": [
+            "没有实时天气来源，实际出行天气未知。",
+            "行动能力或辅助需求受限，出入口和无障碍路径须人工核实。",
+            "真实步行距离未知，无法核对老人步行耐受度。",
+            "公开驾驶快照不证明实际车辆、道路通行、医院入口或接送服务可用。"
+          ]
+        },
+        {
+          "type": "GROUND_AIR_GROUND",
+          "review": "REJECT",
+          "dataStatus": "DATA_UNAVAILABLE",
+          "reasons": [
+            "模拟天气设为晴朗情景，但真实天气与可飞性未知。",
+            "行动能力或辅助需求受限，出入口和无障碍路径须人工核实。",
+            "真实步行距离未知，无法核对老人步行耐受度。",
+            "虚拟起降点的地面接驳和换乘负担不可核实。",
+            "无真实天气、空域、航班及运营依据，模拟方案不可执行。",
+            "路段证据包含 DATA_UNAVAILABLE，缺失数据不能被路线级状态覆盖。",
+            "路段证据包含 SIMULATED_DATA，不代表真实可运营服务。"
+          ]
+        }
+      ],
+      "warnings": [
+        "路线是公开地图模型估计与模拟情景，实际出行前须核实入口、接送、天气及可达性。",
+        "地图与路线数据署名：© OpenStreetMap contributors；驾驶时间为 OSRM 模型快照。",
+        "低空方案为 SIMULATED_DATA，真实运营、地面接驳、天气与价格均未证实；不可预订。"
+      ]
+    },
+    "R2": {
+      "input": "65岁老人行动正常，从天津大学卫津路校区到天津医科大学总医院，2026年9月30日下午15:00出发，普通出行，时间优先。",
+      "planningAllowed": true,
+      "missingFields": [],
+      "uncertainFields": [],
+      "followUp": null,
+      "mobility": "NORMAL",
+      "wheelchairRequirement": null,
+      "focus": "TIME",
+      "urgency": "NORMAL",
+      "routes": [
+        {
+          "type": "GROUND_ONLY",
+          "review": "DOWNGRADE",
+          "dataStatus": "PUBLIC_DATA",
+          "reasons": [
+            "没有实时天气来源，实际出行天气未知。",
+            "真实步行距离未知，无法核对老人步行耐受度。",
+            "公开驾驶快照不证明实际车辆、道路通行、医院入口或接送服务可用。"
+          ]
+        },
+        {
+          "type": "GROUND_AIR_GROUND",
+          "review": "REJECT",
+          "dataStatus": "DATA_UNAVAILABLE",
+          "reasons": [
+            "模拟天气设为晴朗情景，但真实天气与可飞性未知。",
+            "真实步行距离未知，无法核对老人步行耐受度。",
+            "虚拟起降点的地面接驳和换乘负担不可核实。",
+            "无真实天气、空域、航班及运营依据，模拟方案不可执行。",
+            "路段证据包含 DATA_UNAVAILABLE，缺失数据不能被路线级状态覆盖。",
+            "路段证据包含 SIMULATED_DATA，不代表真实可运营服务。"
+          ]
+        }
+      ],
+      "warnings": [
+        "路线是公开地图模型估计与模拟情景，实际出行前须核实入口、接送、天气及可达性。",
+        "地图与路线数据署名：© OpenStreetMap contributors；驾驶时间为 OSRM 模型快照。",
+        "低空方案为 SIMULATED_DATA，真实运营、地面接驳、天气与价格均未证实；不可预订。"
+      ]
+    },
+    "R3": {
+      "input": "72岁老人行动一般，少步行，从深圳市养老护理院到北京大学深圳医院，2026年9月30日下午15:00出发，普通出行。",
+      "planningAllowed": true,
+      "missingFields": [],
+      "uncertainFields": [],
+      "followUp": null,
+      "mobility": "MODERATE",
+      "wheelchairRequirement": null,
+      "focus": "LESS_WALKING",
+      "urgency": "NORMAL",
+      "routes": [
+        {
+          "type": "GROUND_ONLY",
+          "review": "DOWNGRADE",
+          "dataStatus": "PUBLIC_DATA",
+          "reasons": [
+            "没有实时天气来源，实际出行天气未知。",
+            "真实步行距离未知，无法核对老人步行耐受度。",
+            "公开驾驶快照不证明实际车辆、道路通行、医院入口或接送服务可用。"
+          ]
+        },
+        {
+          "type": "GROUND_AIR_GROUND",
+          "review": "REJECT",
+          "dataStatus": "DATA_UNAVAILABLE",
+          "reasons": [
+            "模拟天气设为晴朗情景，但真实天气与可飞性未知。",
+            "真实步行距离未知，无法核对老人步行耐受度。",
+            "虚拟起降点的地面接驳和换乘负担不可核实。",
+            "无真实天气、空域、航班及运营依据，模拟方案不可执行。",
+            "路段证据包含 DATA_UNAVAILABLE，缺失数据不能被路线级状态覆盖。",
+            "路段证据包含 SIMULATED_DATA，不代表真实可运营服务。"
+          ]
+        }
+      ],
+      "warnings": [
+        "路线是公开地图模型估计与模拟情景，实际出行前须核实入口、接送、天气及可达性。",
+        "地图与路线数据署名：© OpenStreetMap contributors；驾驶时间为 OSRM 模型快照。",
+        "低空方案为 SIMULATED_DATA，真实运营、地面接驳、天气与价格均未证实；不可预订。"
+      ]
+    },
+    "R4": {
+      "input": "80岁老人使用轮椅，从天津大学卫津路校区到天津医科大学总医院，2026年9月30日下午15:00出发，普通出行，安全舒适优先。",
+      "planningAllowed": true,
+      "missingFields": [],
+      "uncertainFields": [],
+      "followUp": null,
+      "mobility": "WHEELCHAIR",
+      "wheelchairRequirement": true,
+      "focus": "SAFETY_COMFORT",
+      "urgency": "NORMAL",
+      "routes": [
+        {
+          "type": "GROUND_ONLY",
+          "review": "REJECT",
+          "dataStatus": "PUBLIC_DATA",
+          "reasons": [
+            "没有实时天气来源，实际出行天气未知。",
+            "行动能力或辅助需求受限，出入口和无障碍路径须人工核实。",
+            "需要轮椅，但上下车及无障碍接驳尚无证据。",
+            "真实步行距离未知，无法核对老人步行耐受度。",
+            "公开驾驶快照不证明实际车辆、道路通行、医院入口或接送服务可用。"
+          ]
+        },
+        {
+          "type": "GROUND_AIR_GROUND",
+          "review": "REJECT",
+          "dataStatus": "DATA_UNAVAILABLE",
+          "reasons": [
+            "模拟天气设为晴朗情景，但真实天气与可飞性未知。",
+            "行动能力或辅助需求受限，出入口和无障碍路径须人工核实。",
+            "需要轮椅，但上下车及无障碍接驳尚无证据。",
+            "真实步行距离未知，无法核对老人步行耐受度。",
+            "虚拟起降点的地面接驳和换乘负担不可核实。",
+            "无真实天气、空域、航班及运营依据，模拟方案不可执行。",
+            "路段证据包含 DATA_UNAVAILABLE，缺失数据不能被路线级状态覆盖。",
+            "路段证据包含 SIMULATED_DATA，不代表真实可运营服务。"
+          ]
+        }
+      ],
+      "warnings": [
+        "路线是公开地图模型估计与模拟情景，实际出行前须核实入口、接送、天气及可达性。",
+        "地图与路线数据署名：© OpenStreetMap contributors；驾驶时间为 OSRM 模型快照。",
+        "低空方案为 SIMULATED_DATA，真实运营、地面接驳、天气与价格均未证实；不可预订。"
+      ]
+    },
+    "R5": {
+      "input": "72岁老人行动一般，从深圳市养老护理院到北京大学深圳医院，2026年9月30日下午15:00出发，赶高铁，时间优先。",
+      "planningAllowed": true,
+      "missingFields": [],
+      "uncertainFields": [],
+      "followUp": null,
+      "mobility": "MODERATE",
+      "wheelchairRequirement": null,
+      "focus": "TIME",
+      "urgency": "TIME_SENSITIVE",
+      "routes": [
+        {
+          "type": "GROUND_ONLY",
+          "review": "DOWNGRADE",
+          "dataStatus": "PUBLIC_DATA",
+          "reasons": [
+            "没有实时天气来源，实际出行天气未知。",
+            "真实步行距离未知，无法核对老人步行耐受度。",
+            "公开驾驶快照不证明实际车辆、道路通行、医院入口或接送服务可用。"
+          ]
+        },
+        {
+          "type": "GROUND_AIR_GROUND",
+          "review": "REJECT",
+          "dataStatus": "DATA_UNAVAILABLE",
+          "reasons": [
+            "模拟天气设为晴朗情景，但真实天气与可飞性未知。",
+            "真实步行距离未知，无法核对老人步行耐受度。",
+            "虚拟起降点的地面接驳和换乘负担不可核实。",
+            "无真实天气、空域、航班及运营依据，模拟方案不可执行。",
+            "路段证据包含 DATA_UNAVAILABLE，缺失数据不能被路线级状态覆盖。",
+            "路段证据包含 SIMULATED_DATA，不代表真实可运营服务。"
+          ]
+        }
+      ],
+      "warnings": [
+        "路线是公开地图模型估计与模拟情景，实际出行前须核实入口、接送、天气及可达性。",
+        "地图与路线数据署名：© OpenStreetMap contributors；驾驶时间为 OSRM 模型快照。",
+        "低空方案为 SIMULATED_DATA，真实运营、地面接驳、天气与价格均未证实；不可预订。"
+      ]
+    },
+    "R6": {
+      "input": "老人突然胸痛，而且呼吸困难。",
+      "planningAllowed": false,
+      "missingFields": [
+        "origin",
+        "destination",
+        "departure_time"
+      ],
+      "uncertainFields": [],
+      "followUp": "请优先联系 120 或当地紧急医疗服务；SilverSky 不能替代急救系统。",
+      "mobility": null,
+      "wheelchairRequirement": null,
+      "focus": null,
+      "urgency": "MEDICAL_EMERGENCY",
+      "routes": []
+    },
+    "R7": {
+      "input": "从家里去医院。",
+      "planningAllowed": false,
+      "missingFields": [
+        "departure_time"
+      ],
+      "uncertainFields": [
+        "origin"
+      ],
+      "followUp": "请告诉我出发时间。 请提供家里的具体出发位置，并说明老人年龄和行动情况。",
+      "mobility": null,
+      "wheelchairRequirement": null,
+      "focus": null,
+      "urgency": null,
+      "routes": []
+    },
+    "R8": {
+      "input": "72岁老人行动一般，从北京大学深圳医院到深圳市养老护理院，2026年9月30日下午15:00出发，普通出行。",
+      "planningAllowed": true,
+      "missingFields": [],
+      "uncertainFields": [],
+      "followUp": null,
+      "mobility": "MODERATE",
+      "wheelchairRequirement": null,
+      "focus": null,
+      "urgency": "NORMAL",
+      "routes": [],
+      "warnings": [
+        "该方向没有公开驾驶路线快照；未反用逆向路程。"
+      ]
+    }
+  }
+}

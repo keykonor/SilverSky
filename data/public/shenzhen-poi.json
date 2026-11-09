@@ -1,0 +1,43 @@
+{
+  "kind": "PUBLIC_POIS",
+  "scenario_id": "SZ-001",
+  "city": "SHENZHEN",
+  "data_status": "PUBLIC_DATA",
+  "fetched_at": "2026-09-26T16:06:06Z",
+  "attribution": "© OpenStreetMap contributors",
+  "license_url": "https://www.openstreetmap.org/copyright",
+  "pois": [
+    {
+      "poi_id": "sz-elder-care",
+      "name": "深圳市养老护理院",
+      "address": "深圳市南山区龙珠七路与龙苑路交汇口56号",
+      "official_source_url": "https://www.sz.gov.cn/szzt2010/szyl/ylfw/jgylfw/yljgcx/content/mpost_11992149.html",
+      "coordinate": {
+        "longitude": 113.9789758,
+        "latitude": 22.5655958
+      },
+      "coordinate_kind": "OSM_OBJECT_CENTROID_NOT_ENTRANCE",
+      "osm_ref": "way/1426312278",
+      "coordinate_source_url": "https://www.openstreetmap.org/way/1426312278",
+      "data_status": "PUBLIC_DATA",
+      "source_ref": "https://www.openstreetmap.org/way/1426312278",
+      "observed_at": "2026-09-26T16:06:06Z"
+    },
+    {
+      "poi_id": "sz-pku-hospital",
+      "name": "北京大学深圳医院",
+      "address": "深圳市福田区莲花路1120号",
+      "official_source_url": "https://www.sz.gov.cn/hospital/ssyy/bjdxszyy/content/post_9370612.html",
+      "coordinate": {
+        "longitude": 114.0440949,
+        "latitude": 22.5592647
+      },
+      "coordinate_kind": "OSM_OBJECT_CENTROID_NOT_ENTRANCE",
+      "osm_ref": "way/364731902",
+      "coordinate_source_url": "https://www.openstreetmap.org/way/364731902",
+      "data_status": "PUBLIC_DATA",
+      "source_ref": "https://www.openstreetmap.org/way/364731902",
+      "observed_at": "2026-09-26T16:06:06Z"
+    }
+  ]
+}

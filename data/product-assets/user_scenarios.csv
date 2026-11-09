@@ -1,0 +1,9 @@
+scenario_id,city,user_role,elderly_age,mobility_level,walking_tolerance_m,wheelchair_required,assistance_required,origin,destination,departure_time,urgency,purpose,priority_1,priority_2,priority_3,special_constraints,expected_behavior,status
+SCN-TJ-001,天津,ELDERLY,72,REDUCED,300,NO,YES,河西区某小区家中,天津医科大学总医院(复诊),08:30,NORMAL,MEDICAL,无障碍可达性,时间可控,成本适中,需家人陪同;全程避免楼梯、需电梯与坡道,规划地面+低空衔接路径并标注无障碍设施;非急救、按预约就诊,ACTIVE
+SCN-TJ-002,天津,ELDERLY,68,FULL,500,NO,NO,南开区某小区,子女家中(和平区),10:00,NORMAL,VISIT_FAMILY,总时长最短,舒适度,成本,携带少量伴手礼,提供门到门衔接、预留候机时间,ACTIVE
+SCN-TJ-003,天津,CAREGIVER,,FULL,500,NO,YES,自己家中,养老院(探望老人),11:00,NORMAL,VISIT_FAMILY,时间可控,成本,舒适,携带探视物品,规划往返、避免久等,ACTIVE
+SCN-SZ-001,深圳,ELDERLY,75,SEVERE,100,YES,YES,家中,深圳湾公园(康复散步/观景),09:00,NORMAL,RECREATION,无障碍设施完备,轮椅可通行,全程可协助,需轮椅位与陪护人员随行,优先选择有轮椅通道的起降点与地面接驳;起降点需可容纳轮椅,ACTIVE
+SCN-SZ-002,深圳,ELDERLY,70,REDUCED,250,NO,YES,家中,社区日间照料中心(理疗/康养),14:00,NORMAL,WELLNESS,时间可控,无障碍,成本,需理疗预约,规划往返、避免久等,ACTIVE
+SCN-SZ-003,深圳,CAREGIVER,,FULL,600,NO,YES,工作地点,老人家中(突发不适),15:30,TIME_SENSITIVE,MEDICAL,尽快到达,安全,合规,老人突感不适但非危及生命;需尽快赶到照护,优先调度、但不做医疗处置;如判断为危急应引导呼叫120,ACTIVE
+SCN-SZ-004,深圳,ELDERLY,80,SEVERE,50,YES,YES,家中,医院急诊(疑似卒中),任意,URGENT,MEDICAL,安全,合规,快速,疑似卒中、需立即专业急救,该场景超出低空规划Agent处置范围;应明确引导呼叫120急救体系、SilverSky仅作为转运协同方、不得自行决定医疗处置,ACTIVE
+SCN-SZ-005,深圳,CHILD,,FULL,400,NO,YES,学校,家中(家长接回),16:30,NORMAL,DAILY_TRAVEL,安全,监护人陪同,时间可控,未成年人需成人全程陪同,默认仅作为示范场景;实际未成年人出行需监护人及合规审核,ACTIVE

@@ -1,0 +1,86 @@
+[
+  {
+    "percent": 100,
+    "checks": [
+      "input",
+      "conversation",
+      "routeCard",
+      "safety",
+      "map",
+      "legend",
+      "timeline",
+      "mapControls",
+      "safetyVisibleWithMap"
+    ],
+    "issue": null,
+    "layout": {
+      "devicePixelRatio": 1,
+      "innerWidth": 1440,
+      "outerWidth": 1440,
+      "scrollWidth": 1440
+    }
+  },
+  {
+    "percent": 125,
+    "checks": [
+      "input",
+      "conversation",
+      "routeCard",
+      "safety",
+      "map",
+      "legend",
+      "timeline",
+      "mapControls",
+      "safetyVisibleWithMap"
+    ],
+    "issue": null,
+    "layout": {
+      "devicePixelRatio": 1.25,
+      "innerWidth": 1152,
+      "outerWidth": 1440,
+      "scrollWidth": 1152
+    }
+  },
+  {
+    "percent": 150,
+    "checks": [
+      "input",
+      "conversation",
+      "routeCard",
+      "safety",
+      "map",
+      "legend",
+      "timeline",
+      "mapControls",
+      "safetyVisibleWithMap"
+    ],
+    "issue": null,
+    "layout": {
+      "devicePixelRatio": 1.5,
+      "innerWidth": 960,
+      "outerWidth": 1440,
+      "scrollWidth": 960
+    }
+  },
+  {
+    "percent": 200,
+    "checks": [
+      "input",
+      "conversation",
+      "routeCard",
+      "safety",
+      "map",
+      "legend",
+      "timeline",
+      "mapControls",
+      "safetyVisibleWithMap"
+    ],
+    "issue": null,
+    "layout": {
+      "devicePixelRatio": 2,
+      "innerWidth": 720,
+      "outerWidth": 1440,
+      "scrollWidth": 720
+    }
+  }
+]
